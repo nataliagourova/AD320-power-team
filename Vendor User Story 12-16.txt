@@ -1,0 +1,77 @@
+#12 Vendor opens the app
+Given the Vendor is on the main login page
+When they enter their login information or the information is pre-populated form cookies and they hit “log in” button
+Then the data is submitted, processed, 
+AND
+Then the main Welcome page is displayed
+
+**End Point**
+the app listens  and gets login and password from api/vendors/login POST endpoint
+The data is sent to back-end for processing (see next endpoint), callback function displays "incorrect 
+login information", response ends or "login successful" and calls the next middleware function that 
+loads up the welcome page, response ends.
+
+the login information is passed in and middleware makes a call to compare
+the login credentials to what is stored in the database. If there is a match, login 
+is successful, otherwise it is not successful, and login endpoint will display appropriate 
+message, response ends
+
+
+#13 Vendor Login Submitted (13a:login, 13b: location info)
+Given the Vendor has entered the correct login information that was submitted
+When the authentication clears
+Then the Vendor device location data (longitude and latitude) is collected and stored. 
+AND 
+Then the location is then used on Vendor’s device as a pin on the map
+
+**End Point**
+
+Vendor's device longitude and latitude are collected using an /api/carts GET endpoint and 
+passed into the database.
+the database also records the cart as "online" or "available"
+What is sent back is the "welcome" message and a map with the pin displayed
+via an /api/carts/:cartId PUT endpoint.
+
+
+#14 Main Welcome Page 1
+Scenario: the main Welcome page is loaded and displays the “Menu” button, the “New Orders” button, the “Open Orders” button, the map with cart’s location
+Given the device location data was successfully collected and the Welcome page fully loaded
+When the Vendor clicks on the menu button
+Then a new window pops up displaying all menu items which are checked as available, by default
+AND
+When the Vendor un-checks any of the menu items,
+Then the back-end records then as not available for that particular cart/location
+AND
+Then those items cannot be ordered by the customers
+
+**End Point**
+
+the app listens and when the vendor pushes menu button, an api/menu PUT endpoint displays all menu items, prechecked automatically
+the vendor unchecks what is not available and an api/menu/:id POST endpoint sends that data in, then all is passed into the database
+as not available from the vendor. The api/cart/:id PUT endpoint sends the data to the front end about the available menu options
+
+#15 Main Welcome Page 2
+Scenario: the main Welcome page is loaded and displays the “Menu” button, the “New Orders” button, the “Open Orders” button, the map with cart’s location
+Given the Welcome page fully loaded
+When the Vendor clicks on the “New Orders” button with a number on it
+Then a new orders window pops up showing new not accepted orders (order number menu items, quantity, final price, customer name and profile pic), an “Accept” button and a “Reject” button
+AND
+When the Vendor clicks on “Accept”
+Then the order is moved to “Open Orders” and the number on the “New Orders” button is decremented by one
+OR
+When the Vendor clicks on “Reject”
+Then the order is no longer displayed
+
+
+
+
+# 16 Order Closeout
+Scenario: The Vendor has cooked the order, the customer picked up and paid for the order
+When the Vendor clicks on “Open Orders” button that has a number on it reflecting the count of open (accepted but not yet paid for) orders
+Then the list of open orders pops up, showing the order number and the customer profile picture
+AND
+When the Vendor clicks on an open order number (or an icon next to it, tbd),
+Then “Close” (or “Serve” tbd) button pops up
+AND
+When the Vendor clicks on the “Close” (or “Serve” tbd) button
+Then the order is considered closed (change of status in the backend system) and the number displayed on the “Open Orders” button is decremented by one
