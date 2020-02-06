@@ -55,10 +55,9 @@ CUSTOMER USER STORY #6
 > * **Then**: the quantity of order increase/decreases respectively.
 > * **And**: the check-out button is clickable
 
-UNSURE
+UNSURE what happens to
 **End Point**
-- When user clicks on the checkout button, order details place-your-order window get menu items from /api/vendors/menu **GET** endpoint
-& also get pictures from /api/vendors/menu/pictures **GET** endpoint
+- When user clicks on the checkout button, order details from place-your-order **POST** to /api/vendors/shopping cart/id endpoint
 
 
 
