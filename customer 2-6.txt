@@ -1,0 +1,6 @@
+user story 2
+
+Given: A User is on the map page
+When: they click a doggist pin on the map
+Then: a bubble will pop up
+And: showing that doggist's details (Name, rating, description) along with menu, direction & order buttons
