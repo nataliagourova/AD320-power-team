@@ -1,6 +1,64 @@
-user story 2
+CUSTOMER USER STORY #2
 
-Given: A User is on the map page
-When: they click a doggist pin on the map
-Then: a bubble will pop up
-And: showing that doggist's details (Name, rating, description) along with menu, direction & order buttons
+> * **Given**: A User is on the map page
+> * **When**: they click a doggist pin on the map
+> * **Then**: a bubble will pop up
+> * **And**: showing that doggist's details (Name, rating, description) along with menu, direction & order buttons
+
+**End Point**
+- When the page map loads, map/pin will get latitude & longitude from /api/vendors **GET** endpoint  
+- When the customer clicks on the pin/doggist, the bubble will get _Name, rating, description_ from 
+api/vendors **GET** endpoint  &  _menu button_ from api/vendors/menu **GET** end point
+
+==========================================================================================================
+CUSTOMER USER STORY #3
+
+> * **Given**: the doggiest pop-up is still visible at the map page
+> * **When**: user clicks the doggiest picture, menu or order button
+> * **Then**: place-your-order window will pop up
+> * **And**: available hot-dogs will be listed for ordering.
+
+**End Point**
+- When the order/menu button is press, place-your-order window get menu items from /api/vendors/menu **GET** endpoint
+& also get pictures from /api/vendors/menu/pictures **GET** endpoint
+
+
+==========================================================================================================
+CUSTOMER USER STORY #4
+
+> * **Given**: A User is on the main store map page
+> * **When**: they click the search bar
+> * **Then**: dropdown menu appears
+> * **And**: provide suggestion of doggist / menu item as they type.
+
+**End Point**
+- When user clicks the search bar, result from dropdown menu will get available-menu-item from /api/vendor/menu & 
+get vendor name from /api/vendor **GET** endpoint  
+
+==========================================================================================================
+CUSTOMER USER STORY #5
+
+> * **Given**: the dropdown menu is still visible
+> * **When**: user clicks a doggist/menu item
+> * **Then**: they should be brought into the place your order page
+> * **And**: they should see list of item to configure
+
+**End Point**
+- When user clicks one of the item from search bar, place-your-order window get menu items from /api/vendors/menu **GET** endpoint
+& also get pictures from /api/vendors/menu/pictures **GET** endpoint
+
+==========================================================================================================
+CUSTOMER USER STORY #6
+
+> * **Given**: user is in the placing order page
+> * **When**: they click the up/down arrow of an item
+> * **Then**: the quantity of order increase/decreases respectively.
+> * **And**: the check-out button is clickable
+
+UNSURE
+**End Point**
+- When user clicks on the checkout button, order details place-your-order window get menu items from /api/vendors/menu **GET** endpoint
+& also get pictures from /api/vendors/menu/pictures **GET** endpoint
+
+
+
