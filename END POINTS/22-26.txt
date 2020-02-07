@@ -1,0 +1,37 @@
+CHANGE ITEM PRICE
+22
+Given: User on Admin page looks at menu item options
+When: Click on the option space and change desired price
+Then: Item price is changed
+And: Notification to the user that item price has been changed.
+
+ENDPOINT
+When the page opens, it uses a GET endpoint in api/admin to display values on the page
+When an option changes value, the information is sent to the database, and then the page refreshes, re-accessing the GET endpoint.
+
+23
+Given: The user is on the Logs Access 2 Page
+When: the user clicks in the choose vendor drop down
+Then: The user will be able to choose which vendor they want the specific linked stats of.
+And: View all sales/order#’s/promotions/actions/equipment uptake
+
+ENDPOINT
+When the vendor is selected, a variable get endpoint from api/admin sends a request to the database for the specific vendor data table, this is then displayed to the user. 
+
+24
+Given: The user is on the Logs access page
+When: The user presses any link
+Then: They will be redirected to the Links editing page
+
+ENDPOINT
+When this page is loaded, the pages uses a GET endpoint in api/admin to get basic sales data from the database.
+
+25
+Given: The user is on the menus access page
+When: The user clicks in any text box
+Then: The user can freely access the text.
+
+ENDPOINT
+When the page opens, it uses a GET endpoint in api/admin to display values on the page
+When an option changes value, the information is sent to the database, and then the page refreshes, re-accessing the GET endpoint.
+
