@@ -1,20 +1,61 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
 .App {
   text-align: center;
+  background-color: whitesmoke;
+  background-image: url(./assets/kitchen.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  /* filter: blur(1px); */
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 25vmin;
   pointer-events: none;
+  /* padding-top: 1%;
+  padding-bottom: 2%; */
+  
+}
+
+.App-ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-right: 10px;
+  line-height: 10px;
+}
+
+.App-button{
+  width: 20%;
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 16px 64px;
+  margin: 8px 2px;
+  text-align: center;
+  font-size: calc(10px + 40%);
+  opacity: 0.5;
+  transition: 0.1s;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+.App-button:hover{
+  opacity: 0.85;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 0s linear;
   }
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: rgb(128, 128, 128, 0.3); */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
