@@ -7,9 +7,29 @@
   pointer-events: none;
 }
 
+
+.App-button{
+  width: 15%;
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 1%;
+  margin-top: 2%;
+  text-align: center;
+  font-size: 80%;
+  opacity: 0.5;
+  transition: 0.1s;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+.App-button:hover{
+  opacity: 0.85;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 0s linear;
   }
 }
 
