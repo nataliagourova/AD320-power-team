@@ -1,0 +1,47 @@
+input[type=checkbox] {
+   font-size: 30px;
+ }
+
+ input[type=checkbox]:focus {
+   outline: 10;
+ }
+
+ .Menu-Item {
+   /* display: flex;
+   justify-content: flex-start;
+   flex-direction: column; */
+   border-bottom: 1px solid #cecece;
+   font-family: Roboto, sans-serif;
+   font-weight: 100;
+   font-size: 20px;
+   color: #333333;
+   padding-bottom: 30px;   
+   padding-top: 20px;
+ }
+ 
+ .Table{
+    width: 100%;
+ }
+ .td1 > {
+  width: 20%;
+  ;
+}
+ .td2{
+  width: 50%;
+  text-align: left;
+ }
+
+ .td3{
+   width: 30%;
+ }
+
+ .td3 > img{
+    width: 100%;
+ }
+
+/* .Menu-Item {
+  text-align: left;
+  display: inline-flex;
+  text-align: left;
+  padding-top: 1rem;
+} */
