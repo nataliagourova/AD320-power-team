@@ -1,46 +1,32 @@
 import React from 'react';
-import logo from './assets/hotdogcart.png';
+
+import Landing from './Landing';
 import Vendor from './vendor/Vendor';
+
+
+//      {specific object import,___ ,___ }
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 import './App.css';
 
 
 function App() {
   return (
-    <div className="App">
-      {/*  */}
-      <header className="App-header">
-        <p>We are in the header</p>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>this is the main page</p>
-        <input type="button" className="App-button" value="Admin" onClick={<Vendor />}></input>
-        <input type="button" className="App-button" value="Vendor"  ></input>
-        <input type="button" className="App-button" value="Customer"  ></input>
-      </header>
-      
-      {/* <Vendor/> */}
-     
+    <Router>
+      <div className="App">
+        
+        
+        <Switch>
+          <Route path="/" exact component={Landing} />
+          {/* <Route path="/admin" components={Admin} /> */} 
+          <Route path="/vendor" component={Vendor} />
+          {/* <Route path="/customer" components={Customer} /> */}
+        </Switch>
+          
+      </div>
+    </Router>
 
-       
-      
-
-
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-    </div>
   );
 }
-
+ 
 export default App;
