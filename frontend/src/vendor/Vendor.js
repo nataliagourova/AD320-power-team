@@ -2,6 +2,7 @@ import React from 'react';
 import './Vendor.css';
 import MenuItem from './MenuItem';
 import menuData from "../data/menuData"
+import NavBar from '../common/Nav';
 
 import logo from '../assets/hotdogcart.png'
 
@@ -25,6 +26,7 @@ function Vendor () {
    return(
       //vendor will show the paper list
       <div className = "Bg">
+         <NavBar />
          <div className="Vendor"> 
             <header className="V-header">
                <img src={logo} alt="logo" />
