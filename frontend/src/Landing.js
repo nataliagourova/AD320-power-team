@@ -12,13 +12,27 @@ function Landing() {
         <h3>Welcome to Wheelie Wiener</h3>
         <img src={logo} className="App-logo" alt="logo" />
 
-        <input type="button" className="App-button" value="Admin"   ></input>
+        <input 
+            type     ="button" 
+            className="App-button" 
+            value    ="Admin"
+            //  href is taking 'path' set in <Route />
+            onClick= {event => window.location.href='/admin'} 
+         />
 
-        <input type="button" className="App-button" value="Vendor" onClick= {event =>  window.location.href='/vendor'}   ></input>
+        <input 
+            type     ="button" 
+            className="App-button" 
+            value    ="Vendor"   
+            onClick  = {event => window.location.href='/vendor'}
+         />
 
-        <input type="button" className="App-button" value="Customer"  ></input>
-
-
+        <input 
+            type     ="button" 
+            className="App-button" 
+            value    ="Customer" 
+            onClick  = {event => window.location.href='/customer'} 
+         />
 
       </header>
     </div>
