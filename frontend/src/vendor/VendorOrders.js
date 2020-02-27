@@ -28,7 +28,7 @@ function VendorOrders () {
          <div className="Vendor"> 
             <header className="V-header">
                <img src={logo} alt="logo" />
-               <h1>Orders</h1>
+               <h1>New Orders</h1>
             </header>
             
             

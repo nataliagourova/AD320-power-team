@@ -22,6 +22,12 @@ input[type=checkbox] {
  .Table{
     width: 100%;
  }
+ 
+  .orderId {
+   width: 30pt;
+   padding: 10pt;
+   background-color: #eee;
+ }
  .td1 > {
   width: 20%;
   ;

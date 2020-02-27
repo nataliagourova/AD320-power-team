@@ -1,0 +1,10 @@
+.customerDetailsContainer {
+    background-color: #ffeeee;
+    padding: 5pt;
+    margin: 5pt;
+}
+
+.customerDetailsAvatar {
+    width: 50pt;
+    height: 50pt;
+}

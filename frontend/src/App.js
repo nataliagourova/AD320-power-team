@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './assets/hotdogcart.png';
 import VendorOrders from './vendor/VendorOrders';
+import BottomMenu from './vendor/BottomMenu';
 import './App.css';
 
 function App() {
@@ -14,19 +15,9 @@ function App() {
         <input type="button" className="App-button" value="Customer"  ></input>
       </header> */}
       <VendorOrders />;
+	  <BottomMenu />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );

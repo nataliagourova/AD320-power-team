@@ -1,0 +1,10 @@
+.menuItemButtonContainer {
+    margin: 5pt;
+    padding: 0pt;
+}
+
+.menuItemButton {
+    width: 100pt;
+    padding: 5pt;
+    background-color: #aaaacc;
+} 

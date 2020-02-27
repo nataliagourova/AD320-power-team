@@ -1,43 +1,56 @@
 import React from 'react';
+import MenuItemButton from './MenuItemButton';
+import CustomerDetails from './CustomerDetails';
 import './MenuItem.css';
-import samplePic from '../assets/m1.jpg';
 
-function MenuItem(props) {
-   return(
-      <div className="Menu-Item">
-         <table className="Table">
-            <tr>
-               <td className ="td1"><input type="checkbox" defaultChecked={props.hotdog.available}/></td>
-               <td className ="td2">
+class MenuItem extends React.Component {
+  
+  render() {
+      var hotdog = this.props.hotdog;
+      return(
+         <div className="Menu-Item">
+            <table className="Table">
+               <tbody>
+                  <tr>
+                     <td className ="td1"><input type="checkbox" defaultChecked={hotdog.available}/></td>
+                     <td className ="td2">
                   {/* ================ Name ============ */}
-                     <h3 style={{textDecoration: !props.hotdog.available && "line-through", color: !props.hotdog.available && "#808080"}}>
-                        {props.hotdog.name}
+                     <h3 style={{textDecoration: !hotdog.available && "line-through", color: !hotdog.available && "#808080"}}>
+                        {hotdog.name}
                      </h3>
                   {/* ================ desc ============ */}
-                     <p style={{textDecoration: !props.hotdog.available && "line-through",color: !props.hotdog.available && "#808080"}}>
-                        {props.hotdog.desc}
+                     <p style={{textDecoration: !hotdog.available && "line-through",color: !hotdog.available && "#808080"}}>
+                        {hotdog.desc}
                      </p>   
                   {/* ================ price ============ */}
-                     <p style={{textDecoration: !props.hotdog.available && "line-through",color: !props.hotdog.available && "#808080"}}>
-                        {props.hotdog.price.toLocaleString("en-US", { style: "currency", currency: "USD" })}
+                     <p style={{textDecoration: !hotdog.available && "line-through",color: !hotdog.available && "#808080"}}>
+                        {hotdog.price.toLocaleString("en-US", { style: "currency", currency: "USD" })}
                      </p> 
                </td>
                <td className = "td3">
                   {/* ================ picture ============ */}
-                     <img src={samplePic} alt="menuPic"/>   
+                     <img src={hotdog.pic} alt="menuPic"/> 
                </td>
-            </tr>
-         </table>
-            
+				 <td>
+					<CustomerDetails customerId={hotdog.customerId} />
+				 </td>			   
+                     <td>
+                        <MenuItemButton text="Accept" onClick={this.accept}/>
+                        <MenuItemButton text="Reject" onClick={this.reject}/>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      );
+   }
+   accept = () => {
+      alert("ACCEPTED!!!!! " + this.props.hotdog.name + ":\n Please charge $" + this.props.hotdog.price);
+   }
+   reject = () => {
+      alert("REJECTED!!!!!!!!!!! " + this.props.hotdog.name + ":\n Hey, mark this as unavailable");
+   }
 
-         
-            
-         
-         
-         
-
-      </div>
-   );
 }
 
 export default MenuItem;
