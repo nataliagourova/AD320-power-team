@@ -9,12 +9,10 @@ function Nav(){
    return(
       <nav>
          <ul className="nav-buttons">
-            <Link to='/vendor'> 
                <li>Menu</li>
-            </Link>
                <li>Orders</li>
-               <li>Sign-Out</li>
-            <Link to="/vendor" > Vendor </Link>
+              <Link className="signout" to =""><li>Sign-Out</li></Link> 
+            
 
          </ul>
       </nav>
