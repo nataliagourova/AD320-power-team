@@ -31,10 +31,27 @@ function Vendor () {
             <header className="V-header">
                <img src={logo} alt="logo" />
                <h1>Menu</h1>
-            </header>
-            
-            
-            {menuItemComponents}         
+               <br />
+
+               <h3>Turn On Cart</h3>
+               <label className="switch">
+                  <input type="checkbox" />
+                  <span className="slider round"/>
+               </label>
+               <br />
+               <br />
+
+
+
+            </header> 
+            {menuItemComponents}
+
+            <input 
+            type     ="button" 
+            className="V-updateMenu" 
+            value    ="UPDATE MENU"   
+            onClick  = {event => window.location.href='/vendor'}
+            />   
          </div>
       </div>
    )

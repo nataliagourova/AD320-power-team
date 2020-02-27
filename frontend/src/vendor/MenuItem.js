@@ -7,7 +7,10 @@ function MenuItem(props) {
       <div className="Menu-Item">
          <table className="Table">
             <tr>
-               <td className ="td1"><input type="checkbox" defaultChecked={props.hotdog.available}/></td>
+               <td className ="td1">
+                  <input type="checkbox" defaultChecked={props.hotdog.available}/>
+               </td>
+
                <td className ="td2">
                   {/* ================ Name ============ */}
                      <h3 style={{textDecoration: !props.hotdog.available && "line-through", color: !props.hotdog.available && "#808080"}}>
@@ -22,9 +25,10 @@ function MenuItem(props) {
                         {props.hotdog.price.toLocaleString("en-US", { style: "currency", currency: "USD" })}
                      </p> 
                </td>
+               
                <td className = "td3">
                   {/* ================ picture ============ */}
-                     <img src={samplePic} alt="menuPic"/>   
+                     <img src={props.hotdog.pic} alt="menuPic"/>   
                </td>
             </tr>
          </table>
