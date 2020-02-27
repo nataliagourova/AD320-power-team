@@ -8,7 +8,7 @@ import logo from '../assets/hotdogcart.png'
 
 
 function VendorOrders () {
-   //Arrow fucntion version
+   //Arrow function version
   //jokesData.map(joke => <Joke question={joke.question} punchLine={joke.punchLine} />)
 
                         // mapping essentially extracting json data and
@@ -16,7 +16,7 @@ function VendorOrders () {
   const menuItemComponents = menuData.map( 
       (hotdog) => {
          return(<MenuItem
-                  key={hotdog.id} //always needed else there will be console log error.. has to be unique
+                  key={hotdog.id} //always needed, otherwise there will be a console log error,it  has to be unique
                   hotdog = {hotdog} 
                />
          )

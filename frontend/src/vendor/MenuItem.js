@@ -48,7 +48,7 @@ class MenuItem extends React.Component {
       alert("ACCEPTED!!!!! " + this.props.hotdog.name + ":\n Please charge $" + this.props.hotdog.price);
    }
    reject = () => {
-      alert("REJECTED!!!!!!!!!!! " + this.props.hotdog.name + ":\n Hey, mark this as unavailable");
+      alert("REJECTED!!!!!!!!!!! " + this.props.hotdog.name + "\n Hey, mark this as unavailable");
    }
 
 }
