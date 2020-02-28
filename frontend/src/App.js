@@ -26,12 +26,13 @@ function App() {
           <Route path="/"    exact component = {Landing}   />
           <Route path="/admin"     component = {Admin}    /> 
           <Route path="/vendor"    component = {Vendor}    />
-
+          <div>
           <Route path="/customer"  exact    component = {Customer} />
           <Route path="/customer/search"    component = {Search} />
           <Route path="/customer/clickPin"  component = {ClickPin} />
           <Route path="/customer/menuOrder" component = {MenuOrder} />
           <Route path="/customer/checkout"  component = {CheckOut} />
+          </div>
         </Switch>      
       </div>
     </Router>
