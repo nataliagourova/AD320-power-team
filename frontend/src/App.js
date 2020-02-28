@@ -26,15 +26,13 @@ function App() {
           <Route path="/"    exact component = {Landing}   />
           <Route path="/admin"     component = {Login}    /> 
           <Route path="/vendor"    component = {Vendor}    />
-          <div>
+          
           <Route path="/customer"  exact    component = {Customer} />
           <Route path="/customer/search"    component = {Search} />
           <Route path="/customer/clickPin"  component = {ClickPin} />
           <Route path="/customer/menuOrder" component = {MenuOrder} />
           <Route path="/customer/checkout"  component = {CheckOut} />
-<<<<<<< Updated upstream
-          </div>
-=======
+          <div>
           
           
           <Route path="/Admin1" component= {Admin1Page} />
@@ -44,7 +42,7 @@ function App() {
           <Route path="/Admin1Equipment" component= {Admin1Equipment} />
           <Route path="/Admin1Promotion" component= {Admin1Promotion} />
           <Route path="/Admin2" component= {Admin2Page} />
->>>>>>> Stashed changes
+          </div>
         </Switch>      
       </div>
     </Router>
