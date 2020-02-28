@@ -1,0 +1,16 @@
+body {
+    background-color: #868080;
+}
+
+.wrapper {
+    margin-top:30px;
+    background-color: #e0a03f;
+    margin-left:auto;
+    margin-right:auto;
+    width: 800px;
+}
+
+h1 {
+    font-family: helvetica ;
+}
+
