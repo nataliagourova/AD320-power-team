@@ -1,6 +1,6 @@
 import React from 'react';
 import './VendorOrders.css';
-import MenuItem from './MenuItem';
+import MenuItem1 from './MenuItem1';
 import menuData from "../data/menuData"
 
 import logo from '../assets/hotdogcart.png'
@@ -15,7 +15,7 @@ function VendorOrders () {
                         // place it in the array
   const menuItemComponents = menuData.map( 
       (hotdog) => {
-         return(<MenuItem
+         return(<MenuItem1
                   key={hotdog.id} //always needed, otherwise there will be a console log error,it  has to be unique
                   hotdog = {hotdog} 
                />

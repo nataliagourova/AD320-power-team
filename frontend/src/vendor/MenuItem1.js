@@ -1,9 +1,9 @@
 import React from 'react';
 import MenuItemButton from './MenuItemButton';
 import CustomerDetails from './CustomerDetails';
-import './MenuItem.css';
+import './MenuItem1.css';
 
-class MenuItem extends React.Component {
+class MenuItem1 extends React.Component {
   
   render() {
       var hotdog = this.props.hotdog;
@@ -53,4 +53,4 @@ class MenuItem extends React.Component {
 
 }
 
-export default MenuItem;
+export default MenuItem1;
