@@ -10,8 +10,8 @@ function Nav(){
       <nav>
          <ul className="nav-buttons">
                <li>Menu</li>
-               <li>Orders</li>
-              <Link className="signout" to =""><li>Sign-Out</li></Link> 
+               <li><Link className="signout" to="/newOrders">Orders</Link></li>
+               <li><Link className="signout" to ="">Sign-Out</Link></li> 
             
 
          </ul>

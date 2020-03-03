@@ -2,6 +2,7 @@ import React from 'react';
 
 import Landing   from  './Landing.js';
 import Vendor    from  './vendor/Vendor.js';
+import Vendor1   from  './vendor/Vendor1.js';
 import Admin     from  './admin/Admin';
 import Customer  from  './customer/Customer.js';
 import Search    from  './customer/Search.js';
@@ -25,8 +26,8 @@ function App() {
         <Switch>
           <Route path="/"    exact component = {Landing}   />
           <Route path="/admin"     component = {Admin}    /> 
-          <Route path="/vendor"    component = {Vendor}    />
-
+          <Route path="/vendor"  exact  component = {Vendor}    />
+          <Route path="/newOrders"   component = {Vendor1}    />
           <Route path="/customer"  exact    component = {Customer} />
           <Route path="/customer/search"    component = {Search} />
           <Route path="/customer/clickPin"  component = {ClickPin} />
