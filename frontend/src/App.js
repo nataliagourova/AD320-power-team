@@ -21,19 +21,19 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <div className="App">
+      
         <Switch>
-          <Route path="/"    exact component = {Landing}   />
+        <div >
+          <Route path="/"    exact component = {Landing} className="App"  />
           <Route path="/admin"     component = {Login}    /> 
-          <Route path="/vendor"    component = {Vendor}    />
+          <Route path="/vendor"    component = {Vendor}  className="App"  />
           
-          <Route path="/customer"  exact    component = {Customer} />
-          <Route path="/customer/search"    component = {Search} />
-          <Route path="/customer/clickPin"  component = {ClickPin} />
-          <Route path="/customer/menuOrder" component = {MenuOrder} />
-          <Route path="/customer/checkout"  component = {CheckOut} />
-          <div>
-          
+          <Route path="/customer"  exact    component = {Customer} className="App" />
+          <Route path="/customer/search"    component = {Search}  className="App"/>
+          <Route path="/customer/clickPin"  component = {ClickPin} className="App" />
+          <Route path="/customer/menuOrder" component = {MenuOrder} className="App" />
+          <Route path="/customer/checkout"  component = {CheckOut}  className="App"/>
+         
           
           <Route path="/Admin1" component= {Admin1Page} />
           <Route path="/Admin1Vendor" component= {Admin1Vendor} />
@@ -44,7 +44,7 @@ function App() {
           <Route path="/Admin2" component= {Admin2Page} />
           </div>
         </Switch>      
-      </div>
+      
     </Router>
 
   );
