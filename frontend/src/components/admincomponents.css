@@ -1,0 +1,169 @@
+.loginbox {
+  background-color: #e0a03f;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 200px;
+    margin-bottom: auto;
+    width:200px;
+    height:150px;
+    padding-top:10px;
+    padding-bottom: 50px;
+    padding-left:25px;
+    padding-right:15px;
+    box-shadow: black 2px 2px;
+    opacity: .98;
+}
+
+.center{
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.header {
+
+  box-shadow: black 2px 2px;
+  opacity: .98;
+  background-color: #e0a03f;
+  width:850px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 20px;
+  margin-bottom: auto;
+ 
+}
+ a {
+  text-decoration: none;
+  color:black;
+}
+
+.Admin1{
+  box-shadow: black 2px 2px;
+  opacity: .98;
+  background-color: #e0a03f;
+  width:850px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 20px;
+  margin-bottom: auto;
+  padding:20px;
+  z-index: -1;
+}
+
+.Admin1LOGS{
+  box-shadow: black 2px 2px;
+  opacity: .98;
+  background-color: #e0a03f;
+  width:1000px;
+  margin-left:auto;
+  margin-right:auto;
+  
+  margin-bottom: auto;
+  padding:20px;
+}
+
+.Admin1LOGS > p {
+  display:inline;
+  border: 2px solid black;
+  padding-left: 10px;
+  padding-right:10px;
+  margin-left:30px;
+  font-size:1.2em;
+
+}
+
+ ul {
+  list-style-type: none;
+  padding:10px;
+  margin: 0px;
+}
+
+ li {
+  font-size: 1.5em;
+  padding: 2px;
+  width :100px;
+  margin:2px;
+  display:inline-block;
+
+  
+  border: 2px solid black;
+  
+  
+}
+li:hover {
+  background-color:  #b9740d;
+}
+
+h1 {
+  margin-bottom:0px;
+}
+
+.Admin1 > a {
+  margin: 40px;
+  
+  padding: 3px;
+  font-size:1.5em;
+  text-decoration: none;
+  color:black;
+  border: 2px solid black;
+
+}
+
+h2{
+  display: inline;
+  font-weight:normal;
+  margin-left:52px;
+}
+
+.Admin1 > p{
+  display:inline;
+  border: 2px solid black;
+  padding: 3px;
+  font-size:1.2em;
+}
+
+
+.Admin1 > a:hover {
+  background-color:  #b9740d;
+}
+
+ button {
+  margin:5px;
+  
+  width:80px;
+  height:50px;
+  margin-bottom:10px;
+}
+.Admin1 > hr {
+  color:black;
+}
+
+h3 {
+  padding:10px;
+  display: inline;
+  font-weight:normal;
+  margin:0px;
+}
+.right{
+  float:right;
+}
+
+.right > p {
+  display:inline;
+  border: 2px solid black;
+  padding: 3px;
+  font-size:1.2em;
+}
+
+.Drop{
+  background-color: lightgray;
+  width:150px;
+  float:left;
+  z-index: -2;
+ 
+}
+
+.pad {
+  margin:5px;
+}
