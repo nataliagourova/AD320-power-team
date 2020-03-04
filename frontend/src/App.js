@@ -11,7 +11,7 @@ import Search    from  './customer/Search.js';
 import ClickPin  from  './customer/ClickPin.js';
 import MenuOrder from  './customer/CustMenuOrder.js';
 import CheckOut  from  './customer/CheckOut.js';
-import {Login, Admin1Page, Admin1Vendor, Admin1Admin, Admin1Customer, Admin1Equipment, Admin1Promotion, Admin2Page} from './admin/Admin';
+import {Login, Admin1Page, Admin1Vendor, Admin1Admin, Admin1Customer, Admin1Equipment, Admin1Promotion, Admin2Page, Admin3Page} from './admin/Admin';
 
 
 
@@ -47,10 +47,10 @@ function App() {
           <Route path="/Admin1Equipment" component= {Admin1Equipment} />
           <Route path="/Admin1Promotion" component= {Admin1Promotion} />
           <Route path="/Admin2" component= {Admin2Page} />
+          <Route path="/Admin3" component= {Admin3Page} />
           
 
           <Route path="/"    exact component = {Landing}  className="App" />
-          <Route path="/admin"     component = {Admin}   className="App" /> 
           <Route path="/vendor"  exact  component = {Vendor} className="App"   />
           <Route path="/newOrders"   component = {Vendor1}  className="App"  />
           <Route path="/customer"  exact    component = {Customer} className="App" />
