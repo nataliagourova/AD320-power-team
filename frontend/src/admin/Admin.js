@@ -1,5 +1,5 @@
 import React from 'react';
-import './admin.css';
+import './Admin.css';
 import {Header, Loginbox, Admin1,LogsRow, LogsHead, Admin2 ,Admin2Row} from '../components/admincomponents';
 
 

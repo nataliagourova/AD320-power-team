@@ -7,7 +7,7 @@ import Search    from  './customer/Search.js';
 import ClickPin  from  './customer/ClickPin.js';
 import MenuOrder from  './customer/CustMenuOrder.js';
 import CheckOut  from  './customer/CheckOut.js';
-import {Login, Admin1Page, Admin1Vendor, Admin1Admin, Admin1Customer, Admin1Equipment, Admin1Promotion, Admin2Page} from './admin/admin';
+import {Login, Admin1Page, Admin1Vendor, Admin1Admin, Admin1Customer, Admin1Equipment, Admin1Promotion, Admin2Page} from './admin/Admin';
 
 
 
