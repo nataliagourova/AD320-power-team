@@ -6,6 +6,7 @@ import {
     Route,
     Link
   } from "react-router-dom";
+import {GoogleMap, withScriptjs, withGoogleMap} from 'react-google-maps'
 
  
 
@@ -102,9 +103,19 @@ const Admin2 = () => (
     </div>
 )
 
-const Admin2Row = () => (
-  <div className = 'Admin1' style={{marginTop:0}}>
-  <input type="text" id="username" /> <input type="text" id="username" /> <input type="text" id="username" /><br />
+const Admin2Row = (props) => (
+  <div className = 'Admin2' >
+     <button type="button">DELETE</button> <br />
+  <label for="Name">Item:</label> <label for="Quality 1" style={{paddingLeft:27, marginRight:15}}>Quality 1: </label> <label for="Quality 2" style={{paddingLeft:0}}>Quality 2:</label><label for="Price " >Price:</label> <br />
+  <h2> {props.message} </h2><input type="text" id="Name" /> <input type="text" id="Quality 1" /> <input type="text" id="Quality 2" /> <input type="text" id="Price" /><br />
+  </div>
+)
+
+const Admin3Row = (props) => (
+  <div className = 'Admin2' >
+     <button type="button">DELETE</button> <br />
+  <label for="Name">Vendor:</label> <label for="Quality 1">Latitude: </label> <label for="Quality 2">Longitude:</label><label for="Price " style={{marginLeft:73}}>CartID:</label> <br />
+  <h2> {props.message} </h2><input type="text" id="Name" /> <input type="text" id="Quality 1" /> <input type="text" id="Quality 2" /> <input type="text" id="Price" /><br />
   </div>
 )
 
@@ -125,6 +136,16 @@ const Admin2Row = () => (
     }
     }
 
+    function Map () {
+      return(
+        
+      <GoogleMap defaultZoom = {10} defaultCenter= {{lat:47.6, lng:-122.3}} />
+      
+      );
+    }
+
+    const WrappedMap = withScriptjs(withGoogleMap(Map));
 
 
-    export {Loginbox, Header, Admin1,LogsRow,LogsHead, Admin2, Admin2Row}
+
+    export {Loginbox, Header, Admin1,LogsRow,LogsHead, Admin2, Admin2Row, WrappedMap, Admin3Row}
