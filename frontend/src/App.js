@@ -2,6 +2,10 @@ import React from 'react';
 
 import Landing   from  './Landing.js';
 import Vendor    from  './vendor/Vendor.js';
+
+import Vendor1   from  './vendor/Vendor1.js';
+
+
 import Customer  from  './customer/Customer.js';
 import Search    from  './customer/Search.js';
 import ClickPin  from  './customer/ClickPin.js';
@@ -23,6 +27,7 @@ function App() {
     <Router>
       
         <Switch>
+
         <div>
           <Route path="/"    exact component = {Landing} className="App"  />
           <Route path="/admin"     component = {Login}    /> 
@@ -42,7 +47,19 @@ function App() {
           <Route path="/Admin1Equipment" component= {Admin1Equipment} />
           <Route path="/Admin1Promotion" component= {Admin1Promotion} />
           <Route path="/Admin2" component= {Admin2Page} />
+          
+
+          <Route path="/"    exact component = {Landing}  className="App" />
+          <Route path="/admin"     component = {Admin}   className="App" /> 
+          <Route path="/vendor"  exact  component = {Vendor} className="App"   />
+          <Route path="/newOrders"   component = {Vendor1}  className="App"  />
+          <Route path="/customer"  exact    component = {Customer} className="App" />
+          <Route path="/customer/search"    component = {Search} className="App"/>
+          <Route path="/customer/clickPin"  component = {ClickPin} className="App"/>
+          <Route path="/customer/menuOrder" component = {MenuOrder} className="App"/>
+          <Route path="/customer/checkout"  component = {CheckOut} className="App"/>
           </div>
+
         </Switch>      
       
     </Router>
