@@ -23,7 +23,7 @@ function App() {
     <Router>
       
         <Switch>
-        <div >
+        <div>
           <Route path="/"    exact component = {Landing} className="App"  />
           <Route path="/admin"     component = {Login}    /> 
           <Route path="/vendor"    component = {Vendor}  className="App"  />
