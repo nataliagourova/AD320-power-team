@@ -31,7 +31,7 @@ function App() {
         <div>
           <Route path="/"    exact component = {Landing} className="App"  />
           <Route path="/admin"     component = {Login}    /> 
-          <Route path="/vendor"    component = {Vendor}  className="App"  />
+          {/* <Route path="/vendor"    component = {Vendor}  className="App"  /> */}
           
           <Route path="/customer"  exact    component = {Customer} className="App" />
           <Route path="/customer/search"    component = {Search}  className="App"/>
@@ -50,14 +50,14 @@ function App() {
           <Route path="/Admin3" component= {Admin3Page} />
           
 
-          <Route path="/"    exact component = {Landing}  className="App" />
-          <Route path="/vendor"  exact  component = {Vendor} className="App"   />
+          {/* <Route path="/"    exact component = {Landing}  className="App" /> */}
+          <Route path="/vendor"   component = {Vendor} className="App"   />
           <Route path="/newOrders"   component = {Vendor1}  className="App"  />
-          <Route path="/customer"  exact    component = {Customer} className="App" />
+          {/* <Route path="/customer"  exact    component = {Customer} className="App" />
           <Route path="/customer/search"    component = {Search} className="App"/>
           <Route path="/customer/clickPin"  component = {ClickPin} className="App"/>
           <Route path="/customer/menuOrder" component = {MenuOrder} className="App"/>
-          <Route path="/customer/checkout"  component = {CheckOut} className="App"/>
+          <Route path="/customer/checkout"  component = {CheckOut} className="App"/> */}
           </div>
 
         </Switch>      
