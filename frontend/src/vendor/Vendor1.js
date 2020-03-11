@@ -9,7 +9,7 @@ function Vendor1() {
     <div className="App">
 
       <VendorOrders />;
-	  <BottomMenu />
+	    <BottomMenu />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header>

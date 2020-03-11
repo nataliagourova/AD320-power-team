@@ -2,8 +2,9 @@ import React from 'react';
 
 import Landing   from  './Landing.js';
 import Vendor    from  './vendor/Vendor.js';
-
 import Vendor1   from  './vendor/Vendor1.js';
+import CompletedOrders   from  './vendor/CompletedOrders.js';
+import ProgressOrders   from  './vendor/ProgressOrders.js';
 
 
 import Customer  from  './customer/Customer.js';
@@ -31,8 +32,11 @@ function App() {
         <div>
           <Route path="/"    exact component = {Landing} className="App"  />
           <Route path="/admin"     component = {Login}    /> 
-          {/* <Route path="/vendor"    component = {Vendor}  className="App"  /> */}
-          
+
+
+          <Route path="/vendor/inProgressOrders" component = {ProgressOrders} />
+          <Route path="/vendor/completedOrders"   component = {CompletedOrders}    /> 
+                    
           <Route path="/customer"  exact    component = {Customer} className="App" />
           <Route path="/customer/search"    component = {Search}  className="App"/>
           <Route path="/customer/clickPin"  component = {ClickPin} className="App" />
@@ -51,8 +55,11 @@ function App() {
           
 
           {/* <Route path="/"    exact component = {Landing}  className="App" /> */}
-          <Route path="/vendor"   component = {Vendor} className="App"   />
-          <Route path="/newOrders"   component = {Vendor1}  className="App"  />
+
+
+          <Route path="/vendor" exact component = {Vendor} className="App"   />
+          <Route path="/vendor/newOrders"   component = {Vendor1}  className="App"  />
+
           {/* <Route path="/customer"  exact    component = {Customer} className="App" />
           <Route path="/customer/search"    component = {Search} className="App"/>
           <Route path="/customer/clickPin"  component = {ClickPin} className="App"/>
