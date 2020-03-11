@@ -1,36 +1,44 @@
 //--- React import
-import React from 'react';
+import React, {useState} from 'react';
 
 //--- Google-maps-react import
-import { GoogleMap, withScriptjs, withGoogleMap, Marker } from 'react-google-maps';
+import { GoogleMap, withScriptjs, withGoogleMap, Marker,InfoWindow } from 'react-google-maps';
 
 //--- Data Import
 import vendorData from '../../data/vendorData.js';
 //================================================================================
 
+
 function Map() {
-     return (
-         <GoogleMap 
-            defaultZoom ={10}
-            defaultCenter = {{lat: 47.698940,lng: -122.334373}}
-         >
-           {vendorData.map(
-              vendorCart => {
-                 return(
-                    <Marker 
+
+   const [selectedCart, setSelectedCart] = useState(null);
+
+   return (
+      <GoogleMap 
+         defaultZoom ={10}
+         defaultCenter = {{lat: 47.698940,lng: -122.334373}}
+      >
+         {vendorData.map(
+            vendorCart => {
+               return(
+                  <Marker 
                      key={vendorCart.cartId}
                      position = {
                         {lat: vendorCart.location[0],lng: vendorCart.location[1]}
                      }
-                    />
-                 )
-               }
-           )}
-            
-         </GoogleMap>
+                     onClick = {
+                        ()=>{ setSelectedCart(vendorData) }
+                     }
+                  />
+               )
+            }
+         )
+         } 
 
-     );
-   }
+      </GoogleMap>
+
+   );
+}
 
 const WrappedMap = withScriptjs(withGoogleMap(Map));
 
