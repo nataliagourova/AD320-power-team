@@ -1,9 +1,37 @@
 import React from 'react';
 import './Admin.css';
-import {Header, Loginbox, Admin1,LogsRow, LogsHead, Admin2 ,Admin2Row, WrappedMap, Admin3Row} from '../components/admincomponents';
+import {Header,Footer, Admin2Add, Loginbox, Admin1,LogsRow, LogsHead, Admin2 ,Admin2Row, WrappedMap, Admin3Row} from '../components/admincomponents';
+import {logsData} from "../data/logsData"
+import menuData from "../data/menuData"
 
+const MENU = ({menuData}) => (
+    <>
+      {menuData.map(menu => (
+        <Admin2Row key={menu.id} id = {menu.id} pic = {menu.pic} name = {menu.name} desc = {menu.desc} price = {menu.price} />
+      ))}
+    </>
+  ); 
 
-
+      
+       
+     
+       
+    
+    
+ 
+function LOGS (props) {
+    for (let i = 0; i < logsData.length; i++) {  
+        if (props.message === logsData[i].TYPE) {
+            return(
+                
+                <LogsRow time = {logsData[i].TIMESTAMP} log1 = {logsData[i].LOG1} log2 = {logsData[i].LOG2} log3 = {logsData[i].LOG3} total = {logsData[i].TOTAL}/>
+                
+            )
+       }
+      
+      }     
+    }
+  
 
 function Admin1Page () {
     return(
@@ -28,11 +56,8 @@ function Admin1Vendor () {
     return(
         <div>
         <Header message ='Admin Access: LOGS' />
-        <LogsHead message ='Vendor' message2='Item'/>
-        <LogsRow />
-        <LogsRow />
-        <LogsRow />
-        <LogsRow />
+        <LogsHead message ='Vendor'/>
+        <LOGS message='Vendor' />
         </div>
     )
 }
@@ -42,10 +67,7 @@ function Admin1Admin () {
         <div>
         <Header message ='Admin Access:LOGS' />
         <LogsHead message ='Admin' message2='Item'/>
-        <LogsRow />
-        <LogsRow />
-        <LogsRow />
-        <LogsRow />
+        <LOGS message='Admin' />
         </div>
     )
 }
@@ -55,10 +77,7 @@ function Admin1Customer () {
         <div>
         <Header message ='Admin Access: LOGS' />
         <LogsHead message ='Customer' message2='Item'/>
-        <LogsRow />
-        <LogsRow />
-        <LogsRow />
-        <LogsRow />
+        <LOGS message='User' />
         </div>
     )
 }
@@ -68,10 +87,7 @@ function Admin1Equipment () {
         <div>
         <Header message ='Admin Access: LOGS' />
         <LogsHead message ='Equipment' message2='Item'/>
-        <LogsRow />
-        <LogsRow />
-        <LogsRow />
-        <LogsRow />
+        <LOGS message='Vendor' />
         </div>
     )
 }
@@ -93,9 +109,8 @@ function Admin2Page () {
 return(
     <div>
     <Header message= 'Admin Access: MENUS' />
-    <Admin2Row message= '1'/>
-    <Admin2Row message= '2'/>
-    <Admin2Row message= '3'/>
+    <MENU menuData={menuData}/>
+    <Admin2Add />
 
     
     </div>
@@ -115,6 +130,7 @@ function Admin3Page () {
              />
              <Admin3Row message='1' />
              <Admin3Row message='2' />
+             <Admin2Add />
 
             
 

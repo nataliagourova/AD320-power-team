@@ -7,6 +7,8 @@ import {
     Link
   } from "react-router-dom";
 import {GoogleMap, withScriptjs, withGoogleMap} from 'react-google-maps'
+import{adminData} from "../data/adminData"
+
 
  
 
@@ -39,6 +41,9 @@ const Header = (props) => (
     </div>
 );
 
+// <Link to = "/Admin1Promotion">Sales Promotions</Link>
+  //  <Link to = "/Admin1Equipment" p style={{margin: 35}}> Equipment Uptake</Link>
+
 const Admin1 = () => (
     <div className ='Admin1'> 
     <Link to = "/Admin1Customer">Customer Action</Link>
@@ -46,34 +51,35 @@ const Admin1 = () => (
     <Link to = "/Admin1Admin">Admin Action</Link>
     <br />
     <br />
-    <Link to = "/Admin1Promotion">Sales Promotions</Link>
-    <Link to = "/Admin1Equipment" p style={{margin: 35}}> Equipment Uptake</Link>
+    
     <br />
     <br />
     <hr />
     <br />
     <div className = 'right'>
-    <h2>LABOR COST:</h2> <p p style={{margin: 54}}>4765.35$</p>
+    <h2>LABOR COST:</h2> <p p style={{margin: 54}}>{adminData[0].laborCost}$</p>
     <br />
     <br />
-    <h2>PACKAGING COST:</h2>  <p>4765.35$</p>
+    <h2>PACKAGING COST:</h2>  <p>{adminData[0].packagingCost}$</p>
     <br />
     <br />
-    <h2>BENEFITS:</h2>  <p p style={{margin: 95}}>4765.35$</p>
+    <h2>BENEFITS:</h2>  <p p style={{margin: 95}}>{adminData[0].benefits}$</p>
     </div>  
-    <h2>NET PROFIT:</h2>  <p style={{margin: 32}}>    4765.35$</p>        
+    <h2>NET PROFIT:</h2>  <p style={{margin: 32}}>{adminData[0].netProfit}$</p>        
     <br />
     <br />
-    <h2>GROSS PROFIT:</h2>  <p>4765.35$</p>  
+    <h2>GROSS PROFIT:</h2>  <p>{adminData[0].grossProfit}$</p>  
     <br />
     <br />
-    <h2>MONTHLY:</h2>  <p style={{margin: 47}}>4765.35$</p>    
+    <h2>MONTHLY:</h2>  <p style={{margin: 47}}>{adminData[0].monthly}$</p>    
     </div>
 );
 
-const LogsRow = () => (
+const LogsRow = (props) => (
     <div className="Admin1LOGS" >
-        <h2  style={{marginLeft: 47}}>3:46 PM 2/27/20</h2>  <p>Value</p>    <p>Value</p> <p>Value</p>  <p> Value </p> <p>Value</p> <p>Value</p> <h2 style={{marginLeft: 47}}>Value</h2>
+        
+        <h2  style={{marginLeft: 47}}>{props.time}</h2>  <p>{props.log1}</p>    <p>{props.log2}</p>  <p>{props.log3}</p> <h2 style={{float: "right", marginRight: "20px"}}>{props.total}</h2>
+        
     </div>
 )
 
@@ -81,7 +87,7 @@ const LogsHead = (props) => (
     <div className="Admin1LOGS" style={{marginTop:20}}>
     <h2>{props.message}</h2><hr />
     <div  style={{marginLeft: 47}} >
-    <h2 style={{marginRight: 55}}>Time</h2> <h2>{props.message2}</h2> <h2>{props.message2}</h2> <h2>{props.message2}</h2> <h2>{props.message2}</h2> <h2>{props.message2}</h2> <h2>{props.message2}</h2> <h2>Total</h2>
+    <h2 style={{marginRight: 55}}>Time</h2>  <h2 style={{float: "right", marginRight: "20px"}}>Total</h2>
     </div>
 
     </div>
@@ -103,17 +109,36 @@ const Admin2 = () => (
     </div>
 )
 
+
+
 const Admin2Row = (props) => (
   <div className = 'Admin2' >
-     <button type="button">DELETE</button> <br />
-  <label for="Name">Item:</label> <label for="Quality 1" style={{paddingLeft:27, marginRight:15}}>Quality 1: </label> <label for="Quality 2" style={{paddingLeft:0}}>Quality 2:</label><label for="Price " >Price:</label> <br />
-  <h2> {props.message} </h2><input type="text" id="Name" /> <input type="text" id="Quality 1" /> <input type="text" id="Quality 2" /> <input type="text" id="Price" /><br />
+     <button type="button" style={{float: "right"}}>DELETE</button> <br />
+  <label for="Name">Item:</label> <label for="Quality 1" style={{paddingLeft:27, marginRight:15}}>Description: </label> <label for="Quality 2" style={{paddingLeft:0}}>Image Link: </label><label for="Price " >Price:</label> <br />
+  <h2> {props.id} </h2><input type="text" id="Name" placeholder={props.name} /> <input type="text" id="Quality 1" placeholder={props.desc} /> <input type="text" id="Quality 2" placeholder={props.pic} /> <input type="text" id="Price" placeholder={props.price}/><br />
   </div>
+)
+const Admin2Add = () =>(
+  <div className ='Admin2'>
+    <button type="button" style={{float: "left"}} > EDIT </button>
+    <button type="button" style={{float: "right"}}>ADD</button> <br />
+
+  </div>
+
+)
+
+
+
+const Footer = () =>(
+  <div className ='Admin2'>
+    <h2></h2>
+  </div>
+
 )
 
 const Admin3Row = (props) => (
   <div className = 'Admin2' >
-     <button type="button">DELETE</button> <br />
+     <button type="button" style={{float: "right"}}>DELETE</button> <br />
   <label for="Name">Vendor:</label> <label for="Quality 1">Latitude: </label> <label for="Quality 2">Longitude:</label><label for="Price " style={{marginLeft:73}}>CartID:</label> <br />
   <h2> {props.message} </h2><input type="text" id="Name" /> <input type="text" id="Quality 1" /> <input type="text" id="Quality 2" /> <input type="text" id="Price" /><br />
   </div>
@@ -148,4 +173,4 @@ const Admin3Row = (props) => (
 
 
 
-    export {Loginbox, Header, Admin1,LogsRow,LogsHead, Admin2, Admin2Row, WrappedMap, Admin3Row}
+    export {Loginbox,Footer, Header, Admin1,LogsRow,LogsHead, Admin2, Admin2Row, WrappedMap, Admin3Row, Admin2Add}
