@@ -6,7 +6,13 @@ import { GoogleMap, withScriptjs, withGoogleMap, Marker,InfoWindow } from 'react
 
 //--- Data Import
 import vendorData from '../../data/vendorData.js';
+
+import logo from '../../assets/hotdogcart.png';
+import '../Customer.css';
+
+import {Button} from 'react-bootstrap';
 //================================================================================
+
 
 
 function Map() {
@@ -15,25 +21,47 @@ function Map() {
 
    return (
       <GoogleMap 
-         defaultZoom ={10}
-         defaultCenter = {{lat: 47.698940,lng: -122.334373}}
-      >
+         defaultZoom ={14}
+         defaultCenter = {{lat: 47.707152,lng: -122.326108}}
+      > 
+
          {vendorData.map(
             vendorCart => {
                return(
                   <Marker 
                      key={vendorCart.cartId}
                      position = {
-                        {lat: vendorCart.location[0],lng: vendorCart.location[1]}
+                        {lat: vendorCart.location[0], lng: vendorCart.location[1]}
                      }
                      onClick = {
-                        ()=>{ setSelectedCart(vendorData) }
+                        ()=>{ setSelectedCart(vendorCart) }
                      }
                   />
                )
             }
          )
          } 
+
+         {selectedCart && (
+            <InfoWindow 
+               position = { {lat: selectedCart.location[0], lng: selectedCart.location[1]} }
+               onCloseClick = { () => { setSelectedCart(null) } }
+            >
+               <div className="g-infoWindow">
+                  <img src={logo} alt="placeHolder"/>
+                  <h6>{selectedCart.cartName}</h6>
+                  <p>{selectedCart.description}</p>
+    
+                   <Button variant="outline-secondary"  onClick = {event => window.location.href='/customer/menuOrder'}>
+                      Menu
+                   </Button>
+                   <Button variant="outline-secondary"  onClick = {event => window.location.href='/customer/menuOrder'}>
+                      Order
+                   </Button>
+               </div>
+            </InfoWindow>
+         )}
+
 
       </GoogleMap>
 
@@ -43,8 +71,7 @@ function Map() {
 const WrappedMap = withScriptjs(withGoogleMap(Map));
 
 const styleGMap = {
-   paddingLeft: '1%',
-   paddingRight: '1%'
+   padding:'0rem 1rem'
 }
 
 function GMap(){
