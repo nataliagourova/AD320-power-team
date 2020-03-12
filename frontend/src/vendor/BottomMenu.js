@@ -1,35 +1,20 @@
 import React from 'react';
 import './BottomMenu.css';
 import BottomMenuButton from './BottomMenuButton';
+import {Link} from 'react-router-dom';
 
 class BottomMenu extends React.Component {
    render() {
         return (
             <div className="bottomMenuContainer">
-                <BottomMenuButton text="Welcome Page" onClick={this.goToWelcomePage} />
-                <BottomMenuButton text="My Menu" onClick={this.goToMyMenu} />
-                <BottomMenuButton text="New Orders" onClick={this.goToNewOrders} />
-                <BottomMenuButton text="Open Orders" onClick={this.goToOpenOrders} />
-                <BottomMenuButton text="Closed Orders" onClick={this.goToClosedOrders} />
-                <BottomMenuButton text="Log Out" onClick={this.logOut} />
-                <BottomMenuButton text="Help" onClick={this.goToHelp} />
+                <BottomMenuButton text="Welcome Page" target="/" />
+                <BottomMenuButton text="My Menu" target="/vendor" />
+                <BottomMenuButton text="New Orders" target="/vendor/newOrders" />
+                <BottomMenuButton text="Open Orders" target="/vendor/inProgressOrders"  />
+                <BottomMenuButton text="Closed Orders" target="/vendor/completedOrders" />
+                <BottomMenuButton text="Log Out" target="/logout" />
+                <BottomMenuButton text="Help" target="/help" />
             </div>);
    }
-
-   goToWelcomePage = () => { alert('welcome!'); };
-
-   goToMyMenu = () => { alert('my menu!'); };
-
-   goToNewOrders = () => { alert('new orders!'); };
-
-   goToOpenOrders = () => { alert('open orders!'); };
-
-   goToClosedOrders = () => { alert('closed orders!'); };
-
-   logOut = () => { alert('log out!'); };
-
-   goToHelp = () => { alert('help!'); };
-
 }
-
 export default BottomMenu; 

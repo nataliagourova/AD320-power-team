@@ -1,13 +1,18 @@
 import React from 'react';
 import './BottomMenuButton.css';
+import {Link} from 'react-router-dom';
 
-function BottomMenuButton(props) {
-   return (
-      <span className="bottomMenuButtonContainer">
-        <button className="bottomMenuButton" onClick={props.onClick}>
-            {props.text}
-        </button>
-      </span>);
+class BottomMenuButton extends React.Component {
+
+  render() {
+    return (
+        <span className="bottomMenuButtonContainer">
+          <Link className="bottomMenuButton" to={this.props.target}>
+              {this.props.text}
+          </Link>
+        </span>);
+  }
 }
+
 
 export default BottomMenuButton; 
