@@ -3,13 +3,24 @@
    background-color: whitesmoke;
    
 }
-
-.pic > img{
-   width: 18%;
+/* WW brand text */
+.wwText{
+   color: #f4511e;
+   margin: 5px 0 0 0;
+   font-weight: bold;
 }
+/* .pic > img{
+   width: 18%;
+} */
 
 .g-infoWindow > Button{
    width: auto;
    height: auto;
+}
+
+.infoWindoImage{
+   width: 15%;
+   margin-bottom: 5px;
+   margin-left: 3px;
 }
 

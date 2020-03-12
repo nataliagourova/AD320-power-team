@@ -45,8 +45,6 @@ class CustomerLanding extends React.Component {
                         </Nav>
 
                         <Form inline>
-                        <Nav.Link href="/">                    Home  </Nav.Link>
-
                            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                            <Button variant="outline-primary" >Search</Button>
                         </Form>
