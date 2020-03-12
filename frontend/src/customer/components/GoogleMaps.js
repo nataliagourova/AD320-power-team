@@ -7,6 +7,9 @@ import { GoogleMap, withScriptjs, withGoogleMap, Marker,InfoWindow } from 'react
 //--- Data Import
 import vendorData from '../../data/vendorData.js';
 
+import logo from '../../assets/hotdogcart.png';
+import '../Customer.css';
+
 import {Button} from 'react-bootstrap';
 //================================================================================
 
@@ -45,6 +48,7 @@ function Map() {
                onCloseClick = { () => { setSelectedCart(null) } }
             >
                <div className="g-infoWindow">
+                  <img className="infoWindoImage" src={logo} alt="placeHolder"/>
                   <h6>{selectedCart.cartName}</h6>
                   <p>{selectedCart.description}</p>
     
