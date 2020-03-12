@@ -48,7 +48,7 @@ function Map() {
                onCloseClick = { () => { setSelectedCart(null) } }
             >
                <div className="g-infoWindow">
-                  <img className="infoWindoImage" src={logo} alt="placeHolder"/>
+                  <img src={logo} alt="placeHolder"/>
                   <h6>{selectedCart.cartName}</h6>
                   <p>{selectedCart.description}</p>
     
