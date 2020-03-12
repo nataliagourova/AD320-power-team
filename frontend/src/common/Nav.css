@@ -1,0 +1,23 @@
+/* By not using class name, you can directly write the tag and it will
+style the tag globally for the nav */
+nav{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   min-height: 5vh;
+   background-color: rgb(81, 81, 109);
+   color: whitesmoke
+   ;
+}
+
+.nav-buttons{
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   list-style-type: none;
+}
+
+.signout{
+   color: whitesmoke;
+}

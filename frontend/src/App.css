@@ -1,20 +1,20 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-color: whitesmoke;
+  /* background-image: url(./assets/kitchen.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; */
+  min-height: 100vh;
+  /* filter: blur(1px); */
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: rgb(128, 128, 128, 0.3); */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,11 +22,51 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  background-image: url(./assets/kitchen.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header > h3{
+  color: #f4511e;
+  padding-bottom: 2%;
+  font-weight: 600;
+  font-size: 140%;
 }
+
+.App-logo {
+  width: 15%;
+  height: auto;
+  pointer-events: none;
+  margin-left: 2%;
+}
+
+.App-button{
+  width: 15%;
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 1%;
+  margin-top: 2%;
+  text-align: center;
+  font-size: 80%;
+  opacity: 0.5;
+  transition: 0.1s;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+.App-button:hover{
+  opacity: 0.85;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 0s linear;
+  }
+}
+
+
 
 @keyframes App-logo-spin {
   from {

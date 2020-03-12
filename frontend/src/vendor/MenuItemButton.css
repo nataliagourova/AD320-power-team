@@ -1,0 +1,14 @@
+.menuItemButtonContainer {
+    margin: 5pt;
+    padding: 0pt;
+    display: flex;
+}
+
+.menuItemButton {
+    width: 75pt;
+    padding: 5pt;
+    background-color: #A9A9A9;
+	border-radius: 12px;
+	border: 2px solid black;
+	cursor: pointer;
+} 

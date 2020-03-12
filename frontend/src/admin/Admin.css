@@ -1,0 +1,17 @@
+body {
+    background-color: #868080;
+}
+
+.wrapper {
+    margin-top:30px;
+    
+    margin-left:auto;
+    margin-right:auto;
+    width: 62.5vw;
+    height:50vh;
+}
+
+h1 {
+    font-family: helvetica ;
+}
+

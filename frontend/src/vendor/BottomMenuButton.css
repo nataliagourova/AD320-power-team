@@ -1,0 +1,14 @@
+.bottomMenuButtonContainer {
+    margin: 5pt;
+    padding: 0pt;
+    background-color: #F0FFF0;
+}
+
+.bottomMenuButton {
+    width: 120pt;
+    padding: 5pt;
+    background-color: #F8F8FF;
+	border: 2px solid black;
+	border-radius: 12px;
+	cursor: pointer;	
+} 
