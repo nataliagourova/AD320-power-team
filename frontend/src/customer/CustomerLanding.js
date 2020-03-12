@@ -15,7 +15,7 @@
       import { Button,Container,Row,Col,Navbar, Nav } from 'react-bootstrap';
 
    //--- Google-maps-react import
-      import Map from './components/GoogleMaps';
+      import GMap from './components/GoogleMaps';
 
 //===================================================================
 
@@ -36,7 +36,7 @@ class CustomerLanding extends React.Component {
                         Search Bar
                      </Link>
                   </Navbar>
-                  <Map />
+                  <GMap />
 
                   <Row>
                      <Col> Column 1 of 2</Col>
