@@ -1,7 +1,10 @@
 .custHome{
    text-align: center;
+   background-color: whitesmoke;
+   
 }
 
 .pic > img{
    width: 18%;
 }
+
