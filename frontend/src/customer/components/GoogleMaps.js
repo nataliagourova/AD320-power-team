@@ -6,7 +6,10 @@ import { GoogleMap, withScriptjs, withGoogleMap, Marker,InfoWindow } from 'react
 
 //--- Data Import
 import vendorData from '../../data/vendorData.js';
+
+import {Button} from 'react-bootstrap';
 //================================================================================
+
 
 
 function Map() {
@@ -28,7 +31,7 @@ function Map() {
                         {lat: vendorCart.location[0], lng: vendorCart.location[1]}
                      }
                      onClick = {
-                        ()=>{ setSelectedCart(vendorData) }
+                        ()=>{ setSelectedCart(vendorCart) }
                      }
                   />
                )
@@ -41,11 +44,20 @@ function Map() {
                position = { {lat: selectedCart.location[0], lng: selectedCart.location[1]} }
                onCloseClick = { () => { setSelectedCart(null) } }
             >
-               <div>
-                  park details
+               <div className="g-infoWindow">
+                  <h6>{selectedCart.cartName}</h6>
+                  <p>{selectedCart.description}</p>
+    
+                   <Button variant="outline-secondary" size="sm" onClick = {event => window.location.href='/customer/menuOrder'}>
+                      Menu
+                   </Button>
+                   <Button variant="outline-secondary" size="sm" onClick = {event => window.location.href='/customer/menuOrder'}>
+                      Order
+                   </Button>
                </div>
             </InfoWindow>
          )}
+
 
       </GoogleMap>
 
