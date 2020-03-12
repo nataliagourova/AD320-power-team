@@ -65,14 +65,19 @@
 }
 
 .Admin1LOGS > p {
-  display:inline;
+  display:inline-block;
   border: 2px solid black;
   padding-left: 10px;
   padding-right:10px;
-  margin-left:30px;
+  margin-left:6px;
+  width:20%;
+ 
+  
   font-size:1.2em;
-
 }
+
+
+
 
  ul {
   list-style-type: none;
@@ -198,11 +203,11 @@ h3 {
   width:55px;
   
   padding:0px;
-  margin-left: 750px;
+ 
   margin-right:0px;
   margin-top:0px;
   margin-bottom:0px;
-  Padding:0px;
+  
 }
 
 .Admin3 {

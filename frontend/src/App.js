@@ -44,7 +44,7 @@ function App() {
           <Route path="/Admin1Vendor" component= {Admin1Vendor} />
           <Route path="/Admin1Admin" component= {Admin1Admin} />
           <Route path="/Admin1Customer" component= {Admin1Customer} />
-          <Route path="/Admin1Equipment" component= {Admin1Equipment} />
+         <Route path="/Admin1Equipment" component= {Admin1Equipment} />
           <Route path="/Admin1Promotion" component= {Admin1Promotion} />
           <Route path="/Admin2" component= {Admin2Page} />
           <Route path="/Admin3" component= {Admin3Page} />
