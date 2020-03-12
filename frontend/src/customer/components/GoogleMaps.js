@@ -48,10 +48,10 @@ function Map() {
                   <h6>{selectedCart.cartName}</h6>
                   <p>{selectedCart.description}</p>
     
-                   <Button variant="outline-secondary" size="sm" onClick = {event => window.location.href='/customer/menuOrder'}>
+                   <Button variant="outline-secondary"  onClick = {event => window.location.href='/customer/menuOrder'}>
                       Menu
                    </Button>
-                   <Button variant="outline-secondary" size="sm" onClick = {event => window.location.href='/customer/menuOrder'}>
+                   <Button variant="outline-secondary"  onClick = {event => window.location.href='/customer/menuOrder'}>
                       Order
                    </Button>
                </div>
