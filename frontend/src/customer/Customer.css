@@ -1,19 +1,12 @@
 .custHome{
    text-align: center;
-   background-color: whitesmoke;
+   background-color: white;
 }
-
-/* WW brand text */
-.wwText{
-   color: #f4511e;
-   margin: 5px 0 0 0;
-   font-weight: bold;
-}
-
-/* GoogleMaps CSS */
+/* GoogleMaps.js CSS */
 .g-infoWindow > Button{
    width: auto;
    height: auto;
+   padding: 0.1rem 1rem;
 }
 .g-infoWindow > img{
    width: 15%;
