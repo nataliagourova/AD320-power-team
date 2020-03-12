@@ -15,16 +15,17 @@ function Map() {
 
    return (
       <GoogleMap 
-         defaultZoom ={10}
-         defaultCenter = {{lat: 47.698940,lng: -122.334373}}
-      >
+         defaultZoom ={14}
+         defaultCenter = {{lat: 47.707152,lng: -122.326108}}
+      > 
+
          {vendorData.map(
             vendorCart => {
                return(
                   <Marker 
                      key={vendorCart.cartId}
                      position = {
-                        {lat: vendorCart.location[0],lng: vendorCart.location[1]}
+                        {lat: vendorCart.location[0], lng: vendorCart.location[1]}
                      }
                      onClick = {
                         ()=>{ setSelectedCart(vendorData) }
@@ -34,6 +35,17 @@ function Map() {
             }
          )
          } 
+
+         {selectedCart && (
+            <InfoWindow 
+               position = { {lat: selectedCart.location[0], lng: selectedCart.location[1]} }
+               onCloseClick = { () => { setSelectedCart(null) } }
+            >
+               <div>
+                  park details
+               </div>
+            </InfoWindow>
+         )}
 
       </GoogleMap>
 
