@@ -71,8 +71,7 @@ function Map() {
 const WrappedMap = withScriptjs(withGoogleMap(Map));
 
 const styleGMap = {
-   paddingLeft: '1%',
-   paddingRight: '1%'
+   padding:'0rem 1rem'
 }
 
 function GMap(){
