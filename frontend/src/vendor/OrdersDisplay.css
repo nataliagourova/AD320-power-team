@@ -1,0 +1,67 @@
+ninput[type=checkbox] {
+    font-size: 30px;
+  }
+ 
+  ninput[type=checkbox]:focus {
+    outline: 10;
+  }
+ 
+  .nMenu-Item {
+    /* display: flex;
+    justify-content: flex-start;
+    flex-direction: column; */
+    text-align: center;
+    border-bottom: 1px solid #cecece;
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    color: #333333;
+       
+    padding-top: 20px;
+  }
+  
+  .nTable{
+     width: 80%;
+     scroll-padding-left: 20px;
+     text-align: center;
+  }
+  
+   .norderId {
+    width: 30pt;
+    padding: 10pt;
+    background-color: #eee;
+  }
+  .ntd1 > {
+   width: 20%;
+   ;
+ }
+  .ntd2{
+   width: 50%;
+   text-align: left;
+  }
+ 
+  .ntd3{
+    width: 400px;
+
+  }
+ 
+  .ntd4{
+   width: 200px;
+   text-align: left;
+  }
+ 
+  .ntd3 > img{
+     width: 100px;
+  }
+ 
+ /* .nMenu-Item {
+   ;
+   display: inline-flex;
+   text-align: left;
+   padding-top: 1rem;
+ } */
+ 
+
+ .OrderDisplay-OrderPic {
+   width: 170px;
+ }

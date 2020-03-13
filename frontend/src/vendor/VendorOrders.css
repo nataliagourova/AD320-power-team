@@ -1,12 +1,23 @@
 /* vendor is the menu list */
-.VendorOrder-Bg{
+.CompletedOrders-Container {
+    margin: auto;
+    width: 800px;
+    padding: 10px;
+    background-color:white;
+  }
+
+.CompletedOrders-Header {
+    text-align: center;
+}
+  
+.VendorOrder-Bg2{
    background-image: url(../assets/hotdogbackground1.jpg);
 
    background-repeat: repeat;
    min-height: 100vh;
    
 }
-.Vendor{ 
+.Vendor2{ 
    background-color: white;
    margin: auto ;
    max-width: 40%;
@@ -28,25 +39,26 @@
    padding: 20px;
 }
 
-.In-Progress {
+.In-Progress2{
     height: 40vmin;
     pointer-events: none;
+    align-content: center;
     display: flex;
 }
 
-.Vendor > h1{
+.Vendor2 > h1{
    font-family: Roboto, sans-serif;
    color: #333333;
 
 }
 
-.V-header{
+.V-header2{
    align-items: center;
    border-bottom: 2px solid gray
 
 }
 
-.V-header > img {
+.V-header2 > img {
    width: 30%;
    height: auto;
    pointer-events: none;

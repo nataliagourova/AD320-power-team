@@ -24,9 +24,9 @@ function VendorOrders () {
    ) 
    return(
       //vendor will show the paper list
-      <div className = "VendorOrder-Bg">
-         <div className="Vendor"> 
-            <header className="V-header">
+      <div className = "VendorOrder-Bg2">
+         <div className="Vendor2"> 
+            <header className="V-header2">
                <img src={logo} alt="logo" />
                <h1>New Orders</h1>
             </header>

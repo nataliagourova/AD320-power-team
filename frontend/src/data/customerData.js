@@ -1,6 +1,6 @@
 const customers = [
     {
-        name : "Johart Chiao",
+        name : "Johart Ciao",
         pic : "/assets/useravatar1.png"
     },
     {
@@ -10,8 +10,27 @@ const customers = [
     {
         name : "Kieran Hello",
         pic : "/assets/useravatar1.png"
-	}	
-	
+    },
+    {
+        name : "Incognito Hello",
+        pic : "/assets/useravatar1.png"
+    },
+    {
+        name : "Natalia Privet",
+        pic : "/assets/useravatar1.png"
+    },
+    {
+        name : "Sherrod Howdy",
+        pic : "/assets/useravatar1.png"
+    },
+    {			
+	        name : "Denny Ni hao",
+        pic : "/assets/useravatar2.png"
+    },
+    {
+        name : "Denny Ni hao",
+        pic : "/assets/useravatar2.png"
+    }
 ]
 
 export default customers; 
