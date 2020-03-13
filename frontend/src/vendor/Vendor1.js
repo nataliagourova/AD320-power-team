@@ -6,12 +6,12 @@ import './Vendor1.css';
 
 function Vendor1() {
   return (
-    <div className="App">
+    <div className="App1">
 
       <VendorOrders />;
 	    <BottomMenu />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <header className="App-header1">
+        <img src={logo} className="App-logo1" alt="logo" />
       </header>
     </div>
   );

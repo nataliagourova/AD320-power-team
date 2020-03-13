@@ -12,7 +12,7 @@ class BottomMenu extends React.Component {
                 <BottomMenuButton text="New Orders" target="/vendor/newOrders" />
                 <BottomMenuButton text="Open Orders" target="/vendor/inProgressOrders"  />
                 <BottomMenuButton text="Closed Orders" target="/vendor/completedOrders" />
-                <BottomMenuButton text="Log Out" target="/logout" />
+                <BottomMenuButton text="Log Out" target="/" />
                 <BottomMenuButton text="Help" target="/help" />
             </div>);
    }
