@@ -1,20 +1,27 @@
-import React from 'react';
-import checkOutPic from '../assets/custScreen/checkout.png';
-import './Customer.css';
+   //--- React import
+   import React, {Component} from 'react';
+   //--- CSS
+      import './Customer.css';
 
+   //--- Component import
+      import CustNav from './components/CustomerNav.js';
+   //--- BootStrap import
+      import 'bootstrap/dist/css/bootstrap.min.css';
+      import { Container,Row,Col} from 'react-bootstrap';
+//===================================================================
 
-import {Link} from 'react-router-dom';
+class CheckOut extends Component {
+   render(){
+      return(
+         <div className="checkOut">
+            <Container>
+               <CustNav/>
+               <h1>CheckOut Page</h1>
+            </Container>
+         </div>
 
-
-function CheckOut () {
-   return(
-      <div className="custHome">
-         <h1>Login / SignUp Prompt</h1>
-         <Link  className="pic" to = "">
-            <img src={checkOutPic} alt = "menu"/>   
-         </Link>
-      </div>
-   )
+      )
+   }
 }
 
 export default CheckOut;
