@@ -4,7 +4,12 @@
     width: 800px;
     padding: 10px;
     background-color:white;
+    margin-bottom: 150px;
   }
+
+.CompletedOrders-HeaderPic>img {
+    width: 140px;
+}
 
 .CompletedOrders-Header {
     text-align: center;
@@ -54,12 +59,12 @@
 
 .V-header2{
    align-items: center;
-   border-bottom: 2px solid gray
-
+   border-bottom: 2px solid gray;
+   text-align:center;
 }
 
-.V-header2 > img {
-   width: 30%;
+.V-header2>img {
+   width: 140px;
    height: auto;
    pointer-events: none;
    margin-left: 2%;

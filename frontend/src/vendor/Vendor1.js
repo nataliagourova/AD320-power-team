@@ -10,9 +10,6 @@ function Vendor1() {
 
       <VendorOrders />;
 	    <BottomMenu />
-      <header className="App-header1">
-        <img src={logo} className="App-logo1" alt="logo" />
-      </header>
     </div>
   );
 }

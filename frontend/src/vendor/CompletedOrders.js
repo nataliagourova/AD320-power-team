@@ -23,7 +23,7 @@ class CompletedOrders extends React.Component {
       <div className="CompletedOrders-Container" >
          
          <div className="CompletedOrders-Header">
-            <Link className="pic" to = "/customer/search">
+            <Link className="CompletedOrders-HeaderPic" to = "/customer/search">
                <img src={Home} alt = "home"/>   
             </Link>
             <h1>Completed Orders</h1>

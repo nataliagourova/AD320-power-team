@@ -1,5 +1,6 @@
-.App1 {
+.ProgressOrders-Container {
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .App-logo1 {
@@ -41,3 +42,6 @@
   color: #61dafb;
 }
 
+.ProgressOrders-MainPic>img {
+  width: 140px;
+}
