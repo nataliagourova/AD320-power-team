@@ -1,4 +1,22 @@
 USE `mydb` ;
+/*ALTERING the Table Cart*/
+ALTER TABLE cart
+ADD COLUMN Cart_Description VARCHAR(15) AFTER CartId;
+
+ALTER TABLE cart
+ADD COLUMN Cart_Active BOOLEAN DEFAULT TRUE;
+
+ALTER TABLE cart
+ADD COLUMN CartName VARCHAR(15) AFTER Cart_Description;
+
+/*ALTERS Table for admin adds the columns logsData and cartData*/
+ALTER TABLE `admin`
+ADD COLUMN  logsData VARCHAR(15);
+
+ALTER TABLE `admin`
+ADD COLUMN  cartData VARCHAR(15);
+
+
 /* Dummy Data for Main*/
 INSERT INTO  `mydb`.`MAIN`
 	VALUES(1,'Cart1'); 
@@ -61,7 +79,7 @@ WHERE CustomerID = 1;
 
 /*CREATES VIEWS for TeamMates fetches*/
 CREATE VIEW `NatalaisPullCustomers` AS
-SELECT FirstNamvendore AS `First Name`, LastName AS `Last Name`, ProfiePicture AS `Profile PIC`
+SELECT FirstName AS `First Name`, LastName AS `Last Name`, ProfiePicture AS `Profile PIC`
 FROM customer;
 
 CREATE VIEW `NataliasPullMenu` AS
@@ -82,19 +100,4 @@ SELECT LoginName
 FROM `admin`
 WHERE AdminID = 2;
 
-/*ALTERING the Table Cart*/
-ALTER TABLE cart
-ADD COLUMN Cart_Description VARCHAR(15) AFTER CartId;
 
-ALTER TABLE cart
-ADD COLUMN Cart_Active BOOLEAN DEFAULT TRUE;
-
-ALTER TABLE cart
-ADD COLUMN CartName VARCHAR(15) AFTER Cart_Description;
-
-/*ALTERS Table for admin adds the columns logsData and cartData*/
-ALTER TABLE `admin`
-ADD COLUMN  logsData VARCHAR(15);
-
-ALTER TABLE `admin`
-ADD COLUMN  cartData VARCHAR(15);
