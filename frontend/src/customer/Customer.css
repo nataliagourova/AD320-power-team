@@ -1,8 +1,10 @@
-.custHome{
+.custHome, .custMenuOrder, .checkOut{
    text-align: center;
    background-color: white;
+   min-height: 100vh;
 }
-/* GoogleMaps.js CSS */
+
+/* --------------GoogleMaps.js CSS----------------- */
 .g-infoWindow > Button{
    width: auto;
    height: auto;

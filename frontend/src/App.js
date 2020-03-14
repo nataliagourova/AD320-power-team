@@ -8,8 +8,6 @@ import ProgressOrders   from  './vendor/ProgressOrders.js';
 
 
 import CustomerLanding  from  './customer/CustomerLanding.js';
-import Search    from  './customer/Search.js';
-import ClickPin  from  './customer/ClickPin.js';
 import MenuOrder from  './customer/CustMenuOrder.js';
 import CheckOut  from  './customer/CheckOut.js';
 import {Login, Admin1Page, Admin1Vendor, Admin1Admin, Admin1Customer, Admin1Equipment, Admin1Promotion, Admin2Page, Admin3Page} from './admin/Admin';
@@ -29,8 +27,6 @@ function App() {
           {/* <Route path="/vendor"    component = {Vendor}   /> */}
           
           <Route path="/customer"  exact    component = {CustomerLanding}  />
-          <Route path="/customer/search"    component = {Search}    />
-          <Route path="/customer/clickPin"  component = {ClickPin}  />
           <Route path="/customer/menuOrder" component = {MenuOrder} />
           <Route path="/customer/checkout"  component = {CheckOut}  />
 
@@ -42,7 +38,7 @@ function App() {
           <Route path="/Admin1Vendor" component= {Admin1Vendor} />
           <Route path="/Admin1Admin" component= {Admin1Admin} />
           <Route path="/Admin1Customer" component= {Admin1Customer} />
-         <Route path="/Admin1Equipment" component= {Admin1Equipment} />
+          <Route path="/Admin1Equipment" component= {Admin1Equipment} />
           <Route path="/Admin1Promotion" component= {Admin1Promotion} />
           <Route path="/Admin2" component= {Admin2Page} />
           <Route path="/Admin3" component= {Admin3Page} />
