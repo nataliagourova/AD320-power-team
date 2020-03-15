@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import logo from './assets/hotdogcart.png';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 
 import './App.css';
 

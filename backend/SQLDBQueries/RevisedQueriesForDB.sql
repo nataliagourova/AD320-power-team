@@ -100,4 +100,20 @@ SELECT LoginName
 FROM `admin`
 WHERE AdminID = 2;
 
+CREATE VIEW `carts_with_location` AS 
+	select 
+	  cart.CartId as cartId,
+	  cart.CartName as cartName,
+	  cart.Cart_Description as description,
+	  if(cart.Cart_Active = 1, true, false) as cartActive,
+	  if (location.Latitude is null or location.Longitude is null,
+		   null,
+		   JSON_ARRAY(location.Latitude, location.Longitude)) as location
+	from
+	  cart as cart
+	  left outer join location_cart as location
+		on location.LocationId = cart.CartId;
+
+
+
 

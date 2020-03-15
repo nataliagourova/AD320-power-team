@@ -1,18 +1,15 @@
 import React from 'react';
 import logo from '../assets/hotdogcart.png';
 import VendorOrders from './VendorOrders';
+import VendorInfo from './VendorInfo';
 import BottomMenu from './BottomMenu';
 import './Vendor1.css';
 
 function Vendor1() {
   return (
-    <div className="App">
-
-      <VendorOrders />;
-	  <BottomMenu />
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header> */}
+    <div className="App1">
+      <VendorOrders vendorCartId={1}/>;
+	    <BottomMenu />
     </div>
   );
 }
