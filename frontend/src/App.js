@@ -23,6 +23,12 @@ function App() {
     <Router>
         <Switch>
         <div>
+
+          
+         
+          
+          
+
           <Route path="/"    exact component = {Landing}  />
           {/* <Route path="/vendor"    component = {Vendor}   /> */}
           
@@ -34,6 +40,7 @@ function App() {
           <Route path="/vendor/completedOrders"   component = {CompletedOrders}    /> 
          
           <Route path="/admin"     component = {Login}    /> 
+
           <Route path="/Admin1" component= {Admin1Page} />
           <Route path="/Admin1Vendor" component= {Admin1Vendor} />
           <Route path="/Admin1Admin" component= {Admin1Admin} />

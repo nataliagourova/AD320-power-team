@@ -3,34 +3,43 @@ import './Admin.css';
 import {Header,Footer, Admin2Add, Loginbox, Admin1,LogsRow, LogsHead, Admin2 ,Admin2Row, WrappedMap, Admin3Row} from '../components/admincomponents';
 import {logsData} from "../data/logsData"
 import menuData from "../data/menuData"
+import cartData from "../data/cartData"
 
 const MENU = ({menuData}) => (
     <>
       {menuData.map(menu => (
         <Admin2Row key={menu.id} id = {menu.id} pic = {menu.pic} name = {menu.name} desc = {menu.desc} price = {menu.price} />
       ))}
-    </>
+       </>
   ); 
 
       
        
-     
-       
-    
-    
  
-function LOGS (props) {
+const LOGS = (props) => {
+    const arr =[];
     for (let i = 0; i < logsData.length; i++) {  
         if (props.message === logsData[i].TYPE) {
-            return(
+            
                 
-                <LogsRow time = {logsData[i].TIMESTAMP} log1 = {logsData[i].LOG1} log2 = {logsData[i].LOG2} log3 = {logsData[i].LOG3} total = {logsData[i].TOTAL}/>
+              arr.push( <LogsRow time = {logsData[i].TIMESTAMP} log1 = {logsData[i].LOG1} log2 = {logsData[i].LOG2} log3 = {logsData[i].LOG3} total = {logsData[i].TOTAL}/>);
                 
-            )
+            
        }
       
-      }     
-    }
+      }
+      return arr;
+           
+    }   
+
+const CARTS = ({cartData}) => (
+    <>
+    {cartData.map(cart => (
+       <Admin3Row key={cart.CartID} ID = {cart.CartID} lat={cart.Latitude} long={cart.Longitude} time={cart.TIMESTAMP} />
+    ))}
+     </>
+
+);
   
 
 function Admin1Page () {
@@ -128,8 +137,7 @@ function Admin3Page () {
              containerElement= {<div style={{height:"100%"}}/>}
              mapElement= {<div style={{height:"100%"}}/>}
              />
-             <Admin3Row message='1' />
-             <Admin3Row message='2' />
+             <CARTS cartData={cartData}/>
              <Admin2Add />
 
             
