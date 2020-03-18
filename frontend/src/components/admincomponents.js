@@ -49,10 +49,9 @@ const Admin1 = () => (
     <Link to = "/Admin1Customer">Customer Action</Link>
     <Link to = "/Admin1Vendor">Vendor Action</Link>
     <Link to = "/Admin1Admin">Admin Action</Link>
-    <br />
-    <br />
     
-    <br />
+    
+    
     <br />
     <hr />
     <br />
@@ -139,8 +138,8 @@ const Footer = () =>(
 const Admin3Row = (props) => (
   <div className = 'Admin2' >
      <button type="button" style={{float: "right"}}>DELETE</button> <br />
-  <label for="Name">Vendor:</label> <label for="Quality 1">Latitude: </label> <label for="Quality 2">Longitude:</label><label for="Price " style={{marginLeft:73}}>CartID:</label> <br />
-  <h2> {props.message} </h2><input type="text" id="Name" /> <input type="text" id="Quality 1" /> <input type="text" id="Quality 2" /> <input type="text" id="Price" /><br />
+  <label for="Name" style={{marginRight:"30px"}}>Vendor:</label> <label for="Quality 1" style={{marginRight:"30px"}} >Latitude: </label> <label for="Quality 2">Longitude:</label><label for="Price " style={{marginLeft:73}}>CartID:</label> <br />
+  <h2> {props.message} </h2><input type="text" id="Name" placeholder={props.vid} /> <input type="text" id="Quality 1" placeholder={props.lat}/> <input type="text" id="Quality 2" placeholder={props.long} /> <input type="text" id="Price" placeholder={props.time} /><br />
   </div>
 )
 
