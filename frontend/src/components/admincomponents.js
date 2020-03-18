@@ -6,8 +6,9 @@ import {
     Route,
     Link
   } from "react-router-dom";
-import {GoogleMap, withScriptjs, withGoogleMap} from 'react-google-maps'
+import {GoogleMap, withScriptjs, withGoogleMap, Marker} from 'react-google-maps'
 import{adminData} from "../data/adminData"
+import cartData from "../data/cartData"
 
 
  
@@ -158,15 +159,32 @@ const Admin3Row = (props) => (
         }
       });
     }
-    }
+    } 
+
+    const CART = ({cartData}) => (
+      <>
+      
+    </>
+    )
+    
 
     function Map () {
       return(
         
-      <GoogleMap defaultZoom = {10} defaultCenter= {{lat:47.6, lng:-122.3}} />
+      <GoogleMap defaultZoom = {10} defaultCenter= {{lat:47.6, lng:-122.3}}>
+        
+       {cartData.map(cart => {
+         return(
+        <Marker key={cart.CartID} position={{ lat: cart.Latitude, lng: cart.Longitude }} />
+
+         )})}
+       
+     
+    
+      </GoogleMap>
       
       );
-    }
+        }
 
     const WrappedMap = withScriptjs(withGoogleMap(Map));
 
