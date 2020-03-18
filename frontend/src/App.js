@@ -29,27 +29,21 @@ function App() {
         <Switch>
 
         <div>
-<<<<<<< Updated upstream
-          <Route path="/"    exact component = {Landing} className="App"  />
-          <Route path="/admin"     component = {Login}    /> 
-          <Route path="/vendor"    component = {Vendor}  className="App"  />
-=======
           
           {/* <Route path="/vendor"    component = {Vendor}   /> */}
->>>>>>> Stashed changes
           
           <Route path="/customer"  exact    component = {Customer} className="App" />
           <Route path="/customer/search"    component = {Search}  className="App"/>
           <Route path="/customer/clickPin"  component = {ClickPin} className="App" />
           <Route path="/customer/menuOrder" component = {MenuOrder} className="App" />
           <Route path="/customer/checkout"  component = {CheckOut}  className="App"/>
-         
           
+          <Route path="/Admin" component= {Login} />
           <Route path="/Admin1" component= {Admin1Page} />
           <Route path="/Admin1Vendor" component= {Admin1Vendor} />
           <Route path="/Admin1Admin" component= {Admin1Admin} />
           <Route path="/Admin1Customer" component= {Admin1Customer} />
-         <Route path="/Admin1Equipment" component= {Admin1Equipment} />
+          <Route path="/Admin1Equipment" component= {Admin1Equipment} />
           <Route path="/Admin1Promotion" component= {Admin1Promotion} />
           <Route path="/Admin2" component= {Admin2Page} />
           <Route path="/Admin3" component= {Admin3Page} />
