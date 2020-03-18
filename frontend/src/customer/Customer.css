@@ -1,7 +1,16 @@
 .custHome{
    text-align: center;
+   background-color: white;
+}
+/* GoogleMaps.js CSS */
+.g-infoWindow > Button{
+   width: auto;
+   height: auto;
+   padding: 0.1rem 1rem;
+}
+.g-infoWindow > img{
+   width: 15%;
+   margin-bottom: 5px;
+   margin-left: 3px;
 }
 
-.pic > img{
-   width: 18%;
-}
