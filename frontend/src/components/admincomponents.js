@@ -175,7 +175,9 @@ const Admin3Row = (props) => (
         
        {cartData.map(cart => {
          return(
-        <Marker key={cart.CartID} position={{ lat: cart.Latitude, lng: cart.Longitude }} />
+        <Marker key={cart.CartID} position={{ 
+           lat: cart.Latitude,
+           lng: cart.Longitude }} />
 
          )})}
        
@@ -184,7 +186,7 @@ const Admin3Row = (props) => (
       </GoogleMap>
       
       );
-        }
+       }
 
     const WrappedMap = withScriptjs(withGoogleMap(Map));
 
