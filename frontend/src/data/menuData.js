@@ -1,7 +1,7 @@
 const menuData = [
    {
        id: 1,
-       pic: "../assets/m1.jpg",
+       pic: "/assets/dog4.jpg",
        name: "Space Needle Dog",
        desc: "You will be flying high",
        price: 6.99,
@@ -10,7 +10,7 @@ const menuData = [
    },
    {
         id: 2,
-        pic: "AD320-power-team/frontend/src/assets/m1.jpg",
+        pic: "/assets/dog5.jpg",
         name: "G-Dog",
         desc: "You will not go any other way",
         price: 6.99,
@@ -19,8 +19,7 @@ const menuData = [
     },
     {
         id: 3,
-        pic: "../assets/m1.jpg",
-
+        pic: "/assets/dog6.jpg",
         name: "Spicy Yellow Weiner",
         desc: "It has a little kick",
         price: 6.99,
