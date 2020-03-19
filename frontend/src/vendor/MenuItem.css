@@ -22,7 +22,7 @@ input[type=checkbox] {
  .Table{
     width: 100%;
  }
- .td1 > {
+ .td1 {
   width: 20%;
   ;
 }
@@ -36,7 +36,7 @@ input[type=checkbox] {
  }
 
  .td3 > img{
-    width: 100%;
+    width:85%;
  }
 
 /* .Menu-Item {
