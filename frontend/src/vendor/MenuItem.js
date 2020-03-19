@@ -13,15 +13,20 @@ function MenuItem(props) {
 
                <td className ="td2">
                   {/* ================ Name ============ */}
-                     <h3 style={{padding: 0,textDecoration: !props.hotdog.available && "line-through", color: !props.hotdog.available && "#808080"}}>
+                     <h3 style={{
+                                 textDecoration: !props.hotdog.available && "line-through", 
+                                          color: !props.hotdog.available && "#808080",
+                                        padding: 0}}>
                         {props.hotdog.name}
                      </h3>
                   {/* ================ desc ============ */}
-                     <p style={{textDecoration: !props.hotdog.available && "line-through",color: !props.hotdog.available && "#808080"}}>
+                     <p style={{textDecoration: !props.hotdog.available && "line-through",
+                                         color: !props.hotdog.available && "#808080"}}>
                         {props.hotdog.desc}
                      </p>   
                   {/* ================ price ============ */}
-                     <p style={{textDecoration: !props.hotdog.available && "line-through",color: !props.hotdog.available && "#808080"}}>
+                     <p style={{textDecoration: !props.hotdog.available && "line-through",
+                                         color: !props.hotdog.available && "#808080"}}>
                         {props.hotdog.price.toLocaleString("en-US", { style: "currency", currency: "USD" })}
                      </p> 
                </td>
@@ -32,13 +37,6 @@ function MenuItem(props) {
                </td>
             </tr>
          </table>
-            
-
-         
-            
-         
-         
-         
 
       </div>
    );
