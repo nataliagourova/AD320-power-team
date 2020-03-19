@@ -9,6 +9,9 @@ import {
 import {GoogleMap, withScriptjs, withGoogleMap, Marker} from 'react-google-maps'
 import{adminData} from "../data/adminData"
 import cartData from "../data/cartData"
+const editJsonFile = require("edit-json-file");
+
+
 
 
  
@@ -161,11 +164,7 @@ const Admin3Row = (props) => (
     }
     } 
 
-    const CART = ({cartData}) => (
-      <>
-      
-    </>
-    )
+
     
 
     function Map () {
@@ -175,7 +174,8 @@ const Admin3Row = (props) => (
         
        {cartData.map(cart => {
          return(
-        <Marker key={cart.CartID} position={{ 
+        <Marker key={cart.CartID} 
+        position={{ 
            lat: cart.Latitude,
            lng: cart.Longitude }} />
 
@@ -190,6 +190,18 @@ const Admin3Row = (props) => (
 
     const WrappedMap = withScriptjs(withGoogleMap(Map));
 
+    function WrappedMapExport () {
+      return(
+    
+    <WrappedMap
+             googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDEsKpLXZJY-Ch3s_UN152D7btqc7HOocQ`} 
+             loadingElement= {<div style={{height:"100%"}}/>}
+             containerElement= {<div style={{height:"100%"}}/>}
+             mapElement= {<div style={{height:"100%"}}/>}
+             />
+      );
+      }
 
 
-    export {Loginbox,Footer, Header, Admin1,LogsRow,LogsHead, Admin2, Admin2Row, WrappedMap, Admin3Row, Admin2Add}
+
+    export {Loginbox,Footer, Header, Admin1,LogsRow,LogsHead, Admin2, Admin2Row, WrappedMapExport, Admin3Row, Admin2Add}

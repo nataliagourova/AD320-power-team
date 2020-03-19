@@ -1,6 +1,6 @@
 import React from 'react';
 import './Admin.css';
-import {Header,Footer, Admin2Add, Loginbox, Admin1,LogsRow, LogsHead, Admin2 ,Admin2Row, WrappedMap, Admin3Row} from '../components/admincomponents';
+import {Header,Footer, Admin2Add, Loginbox, Admin1,LogsRow, LogsHead, Admin2 ,Admin2Row, WrappedMapExport, Admin3Row} from '../components/admincomponents';
 import {logsData} from "../data/logsData"
 import menuData from "../data/menuData"
 import cartData from "../data/cartData"
@@ -139,12 +139,7 @@ function Admin3Page () {
         <div className='wrapper' > 
             <Header message = 'Admin Access: Carts' />
             <br />
-            <WrappedMap
-             googleMapURL={'https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyAXZrL7RbZaPghibh3OQt3hUthxPcbFIzA'} 
-             loadingElement= {<div style={{height:"100%"}}/>}
-             containerElement= {<div style={{height:"100%"}}/>}
-             mapElement= {<div style={{height:"100%"}}/>}
-             />
+            <WrappedMapExport />
              <CART cartData={cartData} />
              <Admin2Add />
 
