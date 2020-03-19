@@ -1,14 +1,14 @@
-import React from 'react';
-import './MenuItem.css';
-import samplePic from '../assets/m1.jpg';
+import React, {Component} from 'react';
+import './CustMenuItem.css';
+import Quantity from '../QuantitySelector/QuantitySelector.js';
 
-function MenuItem(props) {
+function CustMenuItem(props) {
    return(
       <div className="Menu-Item">
          <table className="Table">
             <tr>
                <td className ="td1">
-                  <input type="checkbox" defaultChecked={props.hotdog.available}/>
+                  <Quantity/>
                </td>
 
                <td className ="td2">
@@ -42,4 +42,4 @@ function MenuItem(props) {
    );
 }
 
-export default MenuItem;
+export default CustMenuItem;

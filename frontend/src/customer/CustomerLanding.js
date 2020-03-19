@@ -1,9 +1,7 @@
 
 //======================= CUSTOMER LANDING PAGE =====================
    //--- React import
-      import React from 'react';
-      import {Link} from 'react-router-dom';
-
+      import React, {Component} from 'react';
    //--- CSS
       import './Customer.css';
 
@@ -11,26 +9,26 @@
       import CustNav from './components/CustomerNav.js';
    //--- BootStrap import
       import 'bootstrap/dist/css/bootstrap.min.css';
-      import { Button,Container,Row,Col,Navbar, Nav, Form, FormControl } from 'react-bootstrap';
+      import { Container,Row,Col} from 'react-bootstrap';
 
    //--- Google-maps-react import
       import GMap from './components/GoogleMaps';
 
 //===================================================================
 
-class CustomerLanding extends React.Component {
+class CustomerLanding extends Component {
    render(){
       return(
+         <div className="custHome">  
          <Container>
-            <div className="custHome">  
-                  <CustNav/>
-                  <GMap />
-                  <Row>
-                     <Col> Column 1 of 2</Col>
-                     <Col> Column 2 of 2</Col>
-                  </Row>
-            </div>
+            <CustNav/>
+            <GMap />
+            <Row>
+               <Col> Column 1 of 2</Col>
+               <Col> Column 2 of 2</Col>
+            </Row>
          </Container>
+         </div>
       )
    }
 }

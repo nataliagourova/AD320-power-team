@@ -1,7 +1,9 @@
 import React from 'react';
 import './Vendor.css';
 import MenuItem from './MenuItem';
+import VendorInfo from './VendorInfo';
 import menuData from "../data/menuData"
+import vendorData from "../data/vendorData"
 import NavBar from '../common/Nav';
 
 import logo from '../assets/hotdogcart.png'
@@ -32,7 +34,7 @@ function Vendor () {
                <img src={logo} alt="logo" />
                <h1>Menu</h1>
                <br />
-
+               <VendorInfo vendorCartId={1} />
                <h3>Turn On Cart</h3>
                <label className="switch">
                   <input type="checkbox" />

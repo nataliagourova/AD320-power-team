@@ -182,13 +182,13 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Customer` (
   `Login` VARCHAR(45) NOT NULL,
   `Password` VARCHAR(45) NOT NULL,
   `ProfiePicture` VARCHAR(45) NULL,
-  PRIMARY KEY (`CustomerID`),
+  PRIMARY KEY (`CustomerID`)
    /*INDEX `fk_Customer_Location1_idx` (`LocationId` ASC) VISIBLE,*/
-  CONSTRAINT `fk_Customer_Location1`
+  /*CONSTRAINT `fk_Customer_Location1`
     FOREIGN KEY (`LocationId`)
-    REFERENCES `mydb`.`Location` (`LocationId`)
+    REFERENCES `mydb`.`Location_CART` (`LocationId`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON UPDATE NO ACTION*/)
 ENGINE = InnoDB;
 
 
