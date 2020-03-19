@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './admincomponents.css';
 import {
     BrowserRouter as Router,
@@ -6,8 +6,22 @@ import {
     Route,
     Link
   } from "react-router-dom";
-import {GoogleMap, withScriptjs, withGoogleMap} from 'react-google-maps'
+  import { GoogleMap, withScriptjs, withGoogleMap, Marker,InfoWindow } from 'react-google-maps';
 import{adminData} from "../data/adminData"
+import cartData from "../data/cartData"
+    
+    
+    
+    import vendorData from '../data/vendorData.js';
+    
+    import logo from '../assets/hotdogcart.png';
+    import './Customer.css';
+    
+    import {Button} from 'react-bootstrap';
+    //================================================================================
+const editJsonFile = require("edit-json-file");
+
+
 
 
  
@@ -49,10 +63,9 @@ const Admin1 = () => (
     <Link to = "/Admin1Customer">Customer Action</Link>
     <Link to = "/Admin1Vendor">Vendor Action</Link>
     <Link to = "/Admin1Admin">Admin Action</Link>
-    <br />
-    <br />
     
-    <br />
+    
+    
     <br />
     <hr />
     <br />
@@ -114,7 +127,7 @@ const Admin2 = () => (
 const Admin2Row = (props) => (
   <div className = 'Admin2' >
      <button type="button" style={{float: "right"}}>DELETE</button> <br />
-  <label for="Name">Item:</label> <label for="Quality 1" style={{paddingLeft:20, marginRight:3}}>Description: </label> <label for="Quality 2" style={{paddingLeft:0}}>Image Link: </label><label for="Price " style={{marginLeft:67}} >Price:</label> <br />
+  <label for="Name">Item:</label> <label for="Quality 1" style={{paddingLeft:27, marginRight:15}}>Description: </label> <label for="Quality 2" style={{paddingLeft:0}}>Image Link: </label><label for="Price " >Price:</label> <br />
   <h2> {props.id} </h2><input type="text" id="Name" placeholder={props.name} /> <input type="text" id="Quality 1" placeholder={props.desc} /> <input type="text" id="Quality 2" placeholder={props.pic} /> <input type="text" id="Price" placeholder={props.price}/><br />
   </div>
 )
@@ -139,8 +152,8 @@ const Footer = () =>(
 const Admin3Row = (props) => (
   <div className = 'Admin2' >
      <button type="button" style={{float: "right"}}>DELETE</button> <br />
-                       <label for="Name">Time:</label>                          <label for="Quality 1">Latitude: </label> <label for="Quality 2">Longitude:</label><label for="Price " style={{marginLeft:73}}>CartID:</label> <br />
-  <h2> {props.ID} </h2><input type="text" id="Name" placeholder={props.time} /> <input type="text" id="Quality 1" placeholder={props.lat} /> <input type="text" id="Quality 2"  placeholder={props.long}/> <input type="text" id="Price" placeholder={props.ID} /><br />
+  <label for="Name" style={{marginRight:"30px"}}>Vendor:</label> <label for="Quality 1" style={{marginRight:"30px"}} >Latitude: </label> <label for="Quality 2">Longitude:</label><label for="Price " style={{marginLeft:73}}>CartID:</label> <br />
+  <h2> {props.message} </h2><input type="text" id="Name" placeholder={props.vid} /> <input type="text" id="Quality 1" placeholder={props.lat}/> <input type="text" id="Quality 2" placeholder={props.long} /> <input type="text" id="Price" placeholder={props.time} /><br />
   </div>
 )
 
@@ -159,24 +172,89 @@ const Admin3Row = (props) => (
         }
       });
     }
-    }
+    } 
 
-    function Map () {
-      return(
-        
-      <GoogleMap defaultZoom = {10} defaultCenter= {{lat:47.6, lng:-122.3}}>
-        <Marker
-        lat ={47.6}
-        lng ={-122.3} 
-        text ={"words"}/>
+
+    
+
+
+
+
+
+function Map() {
+
+   const [selectedCart, setSelectedCart] = useState(null);
+
+   return (
+      <GoogleMap 
+         defaultZoom ={14}
+         defaultCenter = {{lat: 47.707152,lng: -122.326108}}
+      > 
+
+         {vendorData.map(
+            vendorCart => {
+               return(
+                  <Marker 
+                     key={vendorCart.cartId}
+                     position = {
+                        {lat: vendorCart.location[0], lng: vendorCart.location[1]}
+                     }
+                     onClick = {
+                        ()=>{ setSelectedCart(vendorCart) }
+                     }
+                  />
+               )
+            }
+         )
+         } 
+
+         {selectedCart && (
+            <InfoWindow 
+               position = { {lat: selectedCart.location[0], lng: selectedCart.location[1]} }
+               onCloseClick = { () => { setSelectedCart(null) } }
+            >
+               <div className="g-infoWindow">
+                  <img src={logo} alt="placeHolder"/>
+                  <h6>{selectedCart.cartName}</h6>
+                  <p>{selectedCart.description}</p>
+    
+                   <Button variant="outline-secondary"  onClick = {event => window.location.href='/customer/menuOrder'}>
+                      Menu
+                   </Button>
+                   <Button variant="outline-secondary"  onClick = {event => window.location.href='/customer/menuOrder'}>
+                      Order
+                   </Button>
+               </div>
+            </InfoWindow>
+         )}
+
+
       </GoogleMap>
-      
-      );
-    }
 
-    const WrappedMap = withScriptjs(withGoogleMap(Map));
+   );
+}
 
-    const Marker = (props) => (<div>{props.text}</div>);
+const WrappedMap = withScriptjs(withGoogleMap(Map));
+
+const styleGMap = {
+   padding:'0rem 1rem'
+}
+
+function GMap(){
+   return(
+      <div style={styleGMap}>
+         <WrappedMap
+            googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDEsKpLXZJY-Ch3s_UN152D7btqc7HOocQ`}
+            loadingElement={<div style={{ height: `100%` }} />}
+            containerElement={<div style={{ height: `400px` }} />}
+            mapElement={<div style={{ height: `100%` }} />}
+         />
+      </div>
+   );
+}
 
 
-    export {Loginbox,Footer, Header, Admin1,LogsRow,LogsHead, Admin2, Admin2Row, WrappedMap, Admin3Row, Admin2Add}
+
+
+
+    export {Loginbox,Footer, Header, Admin1,LogsRow,LogsHead, Admin2, Admin2Row, GMap, Admin3Row, Admin2Add}

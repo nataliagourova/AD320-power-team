@@ -1,6 +1,6 @@
 import React from 'react';
 import './Admin.css';
-import {Header,Footer, Admin2Add, Loginbox, Admin1,LogsRow, LogsHead, Admin2 ,Admin2Row, WrappedMap, Admin3Row} from '../components/admincomponents';
+import {Header,Footer, Admin2Add, Loginbox, Admin1,LogsRow, LogsHead, Admin2 ,Admin2Row, Admin3Row, GMap} from '../components/admincomponents';
 import {logsData} from "../data/logsData"
 import menuData from "../data/menuData"
 import cartData from "../data/cartData"
@@ -11,6 +11,14 @@ const MENU = ({menuData}) => (
         <Admin2Row key={menu.id} id = {menu.id} pic = {menu.pic} name = {menu.name} desc = {menu.desc} price = {menu.price} />
       ))}
        </>
+  ); 
+
+  const CART = ({cartData}) => (
+    <>
+      {cartData.map(cart => (
+        <Admin3Row key={cart.id} id = {cart.CartID} vid = {cart.VendorID} lat = {cart.Latitude} long = {cart.Longitude} time = {cart.CartID} />
+      ))}
+    </>
   ); 
 
       
@@ -131,13 +139,8 @@ function Admin3Page () {
         <div className='wrapper' > 
             <Header message = 'Admin Access: Carts' />
             <br />
-            <WrappedMap
-             googleMapURL={'https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places'} 
-             loadingElement= {<div style={{height:"100%"}}/>}
-             containerElement= {<div style={{height:"100%"}}/>}
-             mapElement= {<div style={{height:"100%"}}/>}
-             />
-             <CARTS cartData={cartData}/>
+            <GMap />
+             <CART cartData={cartData} />
              <Admin2Add />
 
             
