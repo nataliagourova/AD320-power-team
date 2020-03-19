@@ -14,14 +14,13 @@ import React from 'react';
    import { Button,Container,Navbar, Nav, Form, FormControl } from 'react-bootstrap';
 
 //===================================================================
-const styleh5 = {
-   color: '#f4511e',
-   margin: '5px 0 0 0',
-   fontWeight: 'bold'
-}
-
 class CustomerNav extends React.Component {
 render(){
+   const styleh5 = {
+      color: '#f4511e',
+      margin: '5px 0 0 0',
+      fontWeight: 'bold'
+   }
    return(
       <Container>
          <div>  

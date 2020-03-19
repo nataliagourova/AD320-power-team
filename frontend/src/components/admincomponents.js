@@ -114,7 +114,7 @@ const Admin2 = () => (
 const Admin2Row = (props) => (
   <div className = 'Admin2' >
      <button type="button" style={{float: "right"}}>DELETE</button> <br />
-  <label for="Name">Item:</label> <label for="Quality 1" style={{paddingLeft:27, marginRight:15}}>Description: </label> <label for="Quality 2" style={{paddingLeft:0}}>Image Link: </label><label for="Price " >Price:</label> <br />
+  <label for="Name">Item:</label> <label for="Quality 1" style={{paddingLeft:20, marginRight:3}}>Description: </label> <label for="Quality 2" style={{paddingLeft:0}}>Image Link: </label><label for="Price " style={{marginLeft:67}} >Price:</label> <br />
   <h2> {props.id} </h2><input type="text" id="Name" placeholder={props.name} /> <input type="text" id="Quality 1" placeholder={props.desc} /> <input type="text" id="Quality 2" placeholder={props.pic} /> <input type="text" id="Price" placeholder={props.price}/><br />
   </div>
 )
@@ -139,8 +139,8 @@ const Footer = () =>(
 const Admin3Row = (props) => (
   <div className = 'Admin2' >
      <button type="button" style={{float: "right"}}>DELETE</button> <br />
-  <label for="Name">Vendor:</label> <label for="Quality 1">Latitude: </label> <label for="Quality 2">Longitude:</label><label for="Price " style={{marginLeft:73}}>CartID:</label> <br />
-  <h2> {props.message} </h2><input type="text" id="Name" /> <input type="text" id="Quality 1" /> <input type="text" id="Quality 2" /> <input type="text" id="Price" /><br />
+                       <label for="Name">Time:</label>                          <label for="Quality 1">Latitude: </label> <label for="Quality 2">Longitude:</label><label for="Price " style={{marginLeft:73}}>CartID:</label> <br />
+  <h2> {props.ID} </h2><input type="text" id="Name" placeholder={props.time} /> <input type="text" id="Quality 1" placeholder={props.lat} /> <input type="text" id="Quality 2"  placeholder={props.long}/> <input type="text" id="Price" placeholder={props.ID} /><br />
   </div>
 )
 
@@ -164,13 +164,19 @@ const Admin3Row = (props) => (
     function Map () {
       return(
         
-      <GoogleMap defaultZoom = {10} defaultCenter= {{lat:47.6, lng:-122.3}} />
+      <GoogleMap defaultZoom = {10} defaultCenter= {{lat:47.6, lng:-122.3}}>
+        <Marker
+        lat ={47.6}
+        lng ={-122.3} 
+        text ={"words"}/>
+      </GoogleMap>
       
       );
     }
 
     const WrappedMap = withScriptjs(withGoogleMap(Map));
 
+    const Marker = (props) => (<div>{props.text}</div>);
 
 
     export {Loginbox,Footer, Header, Admin1,LogsRow,LogsHead, Admin2, Admin2Row, WrappedMap, Admin3Row, Admin2Add}

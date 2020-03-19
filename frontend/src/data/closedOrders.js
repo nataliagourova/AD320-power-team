@@ -1,7 +1,7 @@
 const closedOrders = [
     {
         id: 1,
-        pic: "/assets/dog4.jpg",
+        pic: "/assets/dog8.jpg",
         name: "Tasty",
         desc: "You will be flying high",
         price: 6.99,
@@ -10,7 +10,7 @@ const closedOrders = [
     },
     {
          id: 2,
-         pic: "/assets/dog5.jpg",
+         pic: "/assets/dog8.jpg",
          name: "Juicy",
          desc: "You will not go any other way",
          price: 6.99,
