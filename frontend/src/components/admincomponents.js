@@ -15,7 +15,6 @@ import cartData from "../data/cartData"
     import vendorData from '../data/vendorData.js';
     
     import logo from '../assets/hotdogcart.png';
-    import './Customer.css';
     
     import {Button} from 'react-bootstrap';
     //================================================================================
