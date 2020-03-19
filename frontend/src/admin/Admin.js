@@ -1,6 +1,6 @@
 import React from 'react';
 import './Admin.css';
-import {Header,Footer, Admin2Add, Loginbox, Admin1,LogsRow, LogsHead, Admin2 ,Admin2Row, WrappedMapExport, Admin3Row} from '../components/admincomponents';
+import {Header,Footer, Admin2Add, Loginbox, Admin1,LogsRow, LogsHead, Admin2 ,Admin2Row, Admin3Row, GMap} from '../components/admincomponents';
 import {logsData} from "../data/logsData"
 import menuData from "../data/menuData"
 import cartData from "../data/cartData"
@@ -139,7 +139,7 @@ function Admin3Page () {
         <div className='wrapper' > 
             <Header message = 'Admin Access: Carts' />
             <br />
-            <WrappedMapExport />
+            <GMap />
              <CART cartData={cartData} />
              <Admin2Add />
 
