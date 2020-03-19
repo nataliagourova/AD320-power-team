@@ -13,7 +13,7 @@ function MenuItem(props) {
 
                <td className ="td2">
                   {/* ================ Name ============ */}
-                     <h3 style={{textDecoration: !props.hotdog.available && "line-through", color: !props.hotdog.available && "#808080"}}>
+                     <h3 style={{padding: 0,textDecoration: !props.hotdog.available && "line-through", color: !props.hotdog.available && "#808080"}}>
                         {props.hotdog.name}
                      </h3>
                   {/* ================ desc ============ */}
