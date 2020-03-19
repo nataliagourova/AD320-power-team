@@ -24,7 +24,7 @@ const customers = [
         pic : "/assets/useravatar1.png"
     },
     {			
-	        name : "Denny Ni hao",
+	        name : "Bob Rad",
         pic : "/assets/useravatar2.png"
     },
     {

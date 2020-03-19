@@ -1,10 +1,10 @@
 const menuData1 = [
    {
-       id: 1,
-       pic: "../assets/m1.jpg",
-       name: "Space Needle Dog",
-       desc: "You will be flying high",
-       price: 6.99,
+        id: 1,
+        pic: "/assets/dog4.jpg",
+        name: "Space Needle Dog",
+        desc: "You will be flying high",
+        price: 6.99,
        available: true,
        customerId: 0
 
