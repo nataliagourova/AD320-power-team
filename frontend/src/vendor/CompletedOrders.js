@@ -31,7 +31,7 @@ class CompletedOrders extends React.Component {
          {OrdersComponents}
          <BottomMenu />
 
-      </div>
+         </div>
    )
 }
 }
