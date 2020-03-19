@@ -31,8 +31,11 @@ class CustMenuOrder extends Component {
          <div className="custMenuOrder">
             <Container>
                <CustNav/>
-               <h1>Menu or Order Page</h1>
+               <h1>Menu</h1>
+               <div className="custMenuBox">
                {menuItemComponents}
+               </div>
+               
             </Container>
 
          </div>
